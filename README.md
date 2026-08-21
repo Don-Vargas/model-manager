@@ -290,10 +290,11 @@ back onto the artifact).
 
 ### `POST /artifacts/{artifact_id}/download`
 
-Streams every file belonging to the artifact from Hugging Face into MinIO via multipart
-upload, computing a SHA-256 checksum per file as it streams. On success, sets
-`status: "available"` and records `minio_bucket` / `minio_prefix` on the artifact; on
-failure, sets `status: "failed"` and rolls back.
+Downloading now writes per-file progress into the artifact's `files` array as it streams
+(`download_status`: `pending` → `downloading` → `available`/`failed`, plus
+`downloaded_bytes` and `download_error`), committed incrementally so `GET /downloads/status`
+reflects live progress rather than only the terminal state. Files already present in MinIO
+with a matching size are skipped rather than re-downloaded.
 
 Response:
 ```json
@@ -341,6 +342,59 @@ Response:
 
 Verifying an artifact that was never downloaded is safe and simply returns `missing` for
 each file (falls back to the configured default bucket rather than erroring).
+
+### `POST /artifacts/download-batch`
+
+Triggers download for multiple artifacts in one request. Internally calls the same
+per-artifact download logic as `POST /artifacts/{id}/download`, sequentially, and never
+fails the whole batch because one artifact failed — each result is reported individually.
+
+Request:
+```json
+{ "artifact_ids": ["Qwen--Qwen-Image--pipeline--vae--art--0", "Qwen--Qwen-Image--pipeline--transformer--art--0"] }
+```
+
+Response:
+```json
+{
+  "total": 2,
+  "succeeded": 1,
+  "failed": 1,
+  "results": [
+    { "artifact_id": "...vae--art--0", "status": "available", "bucket": "models", "prefix": "..." },
+    { "artifact_id": "...transformer--art--0", "status": "failed", "detail": "..." }
+  ]
+}
+```
+
+### `GET /downloads/status`
+
+Returns download progress for every artifact currently known to the database, intended
+for polling by an operator UI or CLI during a long download.
+
+Response:
+```json
+{
+  "downloads": [
+    {
+      "artifact_id": "Qwen--Qwen-Image--pipeline--vae--art--0",
+      "repo_id": "Qwen/Qwen-Image",
+      "name": "diffusion_pytorch_model.safetensors",
+      "status": "downloading",
+      "completed_files": 0,
+      "total_files": 1,
+      "downloaded_bytes": 83886080,
+      "total_bytes": 167411776,
+      "progress_percent": 50.1,
+      "error": null
+    }
+  ]
+}
+```
+
+`downloaded_bytes` / `progress_percent` are live during an in-progress download (updated
+per streamed chunk, not just per file) and reflect final byte totals once `status` is
+`available`.
 
 ## Data Model
 
@@ -479,10 +533,9 @@ individually rather than failing the run.
 
 ## Known Limitations
 
-- **No download progress tracking exposed via API** — download is a single blocking request
-  until completion or failure.
-- **No retry logic for failed downloads** — a `failed` artifact can be retried by calling
-  `/download` again, but nothing does this automatically.
+- **No automatic retry for failed downloads** — a `failed` artifact (or one file within it)
+  can be retried by calling `/download` or `/download-batch` again; nothing does this on a
+  schedule. Files that already completed are skipped on retry via a MinIO size check.
 - **SQLite by default** — fine for a single-instance deployment; switch `DATABASE_URL` to
   Postgres for concurrent/multi-writer scenarios.
 - **No schema migrations** — the app calls `Base.metadata.create_all()` at startup, which
@@ -491,8 +544,9 @@ individually rather than failing the run.
 - **No authentication** — the API is unauthenticated; keep it on a private network (this is
   the intended deployment: internal to the `services` VM / Docker network, called by
   `model-agent` on a separate, trusted inference VM).
-- **`artifacts.files` shape is inconsistent** — plain filename strings for most artifacts,
-  `{"path": ...}` dicts for sharded artifacts. Consumers should handle both.
+- **`artifacts.files` shape is inconsistent** — The files JSON column now also holds 
+  transient progress metadata per file (download_status, downloaded_bytes, download_error)
+   alongside path/size/checksum once a download has started
 
 ### Removed dead code
 

@@ -1,6 +1,9 @@
 # app/downloader.py
 import hashlib
 import httpx
+from collections.abc import Callable
+
+
 from .providers.huggingface import HuggingFaceProvider
 from .storage import (
     s3,
@@ -9,6 +12,8 @@ from .storage import (
 )
 
 CHUNK_SIZE = 64 * 1024 * 1024  # 64 MB
+
+progress_callback: Callable[[int], None] | None = None,
 
 
 class DownloadError(Exception):
@@ -23,6 +28,7 @@ def download_file_to_minio(
     object_key: str,
     expected_size: int | None = None,
     expected_checksum: str | None = None,
+    progress_callback=None,
 ):
     if object_matches_size(object_key, expected_size):
         print(f"Skipping {filename}: already exists in MinIO")
@@ -68,6 +74,8 @@ def download_file_to_minio(
 
                     sha256.update(part_data)
                     downloaded_bytes += len(part_data)
+                    if progress_callback:
+                        progress_callback(downloaded_bytes)
 
                     result = s3.upload_part(
                         Bucket=settings.minio_bucket,

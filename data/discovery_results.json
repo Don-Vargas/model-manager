@@ -1,0 +1,2428 @@
+[
+  {
+    "id": "google/bert_uncased_L-2_H-128_A-2",
+    "commit_sha": "30b0a37ccaaa32f332884b96992754e246e48c5f",
+    "gated": false,
+    "updated_at": "2026-08-21T06:08:06.418047",
+    "units": [
+      {
+        "id": "google--bert_uncased_L-2_H-128_A-2--model",
+        "name": "model",
+        "unit_type": "single_checkpoint",
+        "task_type": "unknown",
+        "framework": "transformers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "google--bert_uncased_L-2_H-128_A-2--model--art--0",
+            "name": "model.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "model.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 17739144
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "google--bert_uncased_L-2_H-128_A-2--pytorch_model",
+        "name": "pytorch_model",
+        "unit_type": "single_checkpoint",
+        "task_type": "unknown",
+        "framework": "transformers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "google--bert_uncased_L-2_H-128_A-2--pytorch_model--art--0",
+            "name": "pytorch_model.bin",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "pytorch_model.bin"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 17743809
+          }
+        ],
+        "components": []
+      }
+    ]
+  },
+  {
+    "id": "Wan-AI/Wan2.1-T2V-1.3B-Diffusers",
+    "commit_sha": "0fad780a534b6463e45facd96134c9f345acfa5b",
+    "gated": false,
+    "updated_at": "2026-08-21T06:08:06.534559",
+    "units": [
+      {
+        "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline",
+        "name": "Wan2.1-T2V-1.3B-Diffusers-pipeline",
+        "unit_type": "pipeline",
+        "task_type": "text-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [],
+        "components": [
+          {
+            "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--scheduler",
+            "name": "scheduler",
+            "component_type": "UniPCMultistepScheduler",
+            "artifacts": [
+              {
+                "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--scheduler--art--0",
+                "name": "scheduler_config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "scheduler/scheduler_config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 751
+              }
+            ]
+          },
+          {
+            "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--text_encoder",
+            "name": "text_encoder",
+            "component_type": "UMT5EncoderModel",
+            "artifacts": [
+              {
+                "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--text_encoder--art--0",
+                "name": "model.safetensors",
+                "artifact_type": "weights_sharded",
+                "is_sharded": true,
+                "index_file": "text_encoder/model.safetensors.index.json",
+                "files": [
+                  {
+                    "path": "text_encoder/model-00001-of-00005.safetensors"
+                  },
+                  {
+                    "path": "text_encoder/model-00002-of-00005.safetensors"
+                  },
+                  {
+                    "path": "text_encoder/model-00003-of-00005.safetensors"
+                  },
+                  {
+                    "path": "text_encoder/model-00004-of-00005.safetensors"
+                  },
+                  {
+                    "path": "text_encoder/model-00005-of-00005.safetensors"
+                  }
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 22723671744
+              },
+              {
+                "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--text_encoder--art--1",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "text_encoder/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 854
+              }
+            ]
+          },
+          {
+            "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--tokenizer",
+            "name": "tokenizer",
+            "component_type": "T5TokenizerFast",
+            "artifacts": [
+              {
+                "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--tokenizer--art--0",
+                "name": "special_tokens_map.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/special_tokens_map.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 7079
+              },
+              {
+                "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--tokenizer--art--1",
+                "name": "spiece.model",
+                "artifact_type": "tokenizer",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/spiece.model"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 4548313
+              },
+              {
+                "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--tokenizer--art--2",
+                "name": "tokenizer.json",
+                "artifact_type": "tokenizer",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/tokenizer.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 16837459
+              },
+              {
+                "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--tokenizer--art--3",
+                "name": "tokenizer_config.json",
+                "artifact_type": "tokenizer",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/tokenizer_config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 61758
+              }
+            ]
+          },
+          {
+            "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--transformer",
+            "name": "transformer",
+            "component_type": "WanTransformer3DModel",
+            "artifacts": [
+              {
+                "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--transformer--art--0",
+                "name": "diffusion_pytorch_model.safetensors",
+                "artifact_type": "weights_sharded",
+                "is_sharded": true,
+                "index_file": "transformer/diffusion_pytorch_model.safetensors.index.json",
+                "files": [
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00001-of-00002.safetensors"
+                  },
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00002-of-00002.safetensors"
+                  }
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 5676070648
+              },
+              {
+                "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--transformer--art--1",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "transformer/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 465
+              }
+            ]
+          },
+          {
+            "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--vae",
+            "name": "vae",
+            "component_type": "AutoencoderKLWan",
+            "artifacts": [
+              {
+                "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--vae--art--0",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "vae/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 724
+              },
+              {
+                "id": "Wan-AI--Wan2.1-T2V-1.3B-Diffusers--pipeline--vae--art--1",
+                "name": "diffusion_pytorch_model.safetensors",
+                "artifact_type": "weights",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "vae/diffusion_pytorch_model.safetensors"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 507591892
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Qwen/Qwen-Image",
+    "commit_sha": "75e0b4be04f60ec59a75f475837eced720f823b6",
+    "gated": false,
+    "updated_at": "2026-08-21T06:08:06.656201",
+    "units": [
+      {
+        "id": "Qwen--Qwen-Image--pipeline",
+        "name": "Qwen-Image-pipeline",
+        "unit_type": "pipeline",
+        "task_type": "text-to-image",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [],
+        "components": [
+          {
+            "id": "Qwen--Qwen-Image--pipeline--scheduler",
+            "name": "scheduler",
+            "component_type": "FlowMatchEulerDiscreteScheduler",
+            "artifacts": [
+              {
+                "id": "Qwen--Qwen-Image--pipeline--scheduler--art--0",
+                "name": "scheduler_config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "scheduler/scheduler_config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 485
+              }
+            ]
+          },
+          {
+            "id": "Qwen--Qwen-Image--pipeline--text_encoder",
+            "name": "text_encoder",
+            "component_type": "Qwen2_5_VLForConditionalGeneration",
+            "artifacts": [
+              {
+                "id": "Qwen--Qwen-Image--pipeline--text_encoder--art--0",
+                "name": "model.safetensors",
+                "artifact_type": "weights_sharded",
+                "is_sharded": true,
+                "index_file": "text_encoder/model.safetensors.index.json",
+                "files": [
+                  {
+                    "path": "text_encoder/model-00001-of-00004.safetensors"
+                  },
+                  {
+                    "path": "text_encoder/model-00002-of-00004.safetensors"
+                  },
+                  {
+                    "path": "text_encoder/model-00003-of-00004.safetensors"
+                  },
+                  {
+                    "path": "text_encoder/model-00004-of-00004.safetensors"
+                  }
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 16584414544
+              },
+              {
+                "id": "Qwen--Qwen-Image--pipeline--text_encoder--art--1",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "text_encoder/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 3217
+              },
+              {
+                "id": "Qwen--Qwen-Image--pipeline--text_encoder--art--2",
+                "name": "generation_config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "text_encoder/generation_config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 244
+              }
+            ]
+          },
+          {
+            "id": "Qwen--Qwen-Image--pipeline--tokenizer",
+            "name": "tokenizer",
+            "component_type": "Qwen2Tokenizer",
+            "artifacts": [
+              {
+                "id": "Qwen--Qwen-Image--pipeline--tokenizer--art--0",
+                "name": "added_tokens.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/added_tokens.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 605
+              },
+              {
+                "id": "Qwen--Qwen-Image--pipeline--tokenizer--art--1",
+                "name": "chat_template.jinja",
+                "artifact_type": "runtime_code",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/chat_template.jinja"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 2427
+              },
+              {
+                "id": "Qwen--Qwen-Image--pipeline--tokenizer--art--2",
+                "name": "merges.txt",
+                "artifact_type": "documentation",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/merges.txt"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 1671853
+              },
+              {
+                "id": "Qwen--Qwen-Image--pipeline--tokenizer--art--3",
+                "name": "special_tokens_map.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/special_tokens_map.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 613
+              },
+              {
+                "id": "Qwen--Qwen-Image--pipeline--tokenizer--art--4",
+                "name": "tokenizer_config.json",
+                "artifact_type": "tokenizer",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/tokenizer_config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 4686
+              },
+              {
+                "id": "Qwen--Qwen-Image--pipeline--tokenizer--art--5",
+                "name": "vocab.json",
+                "artifact_type": "tokenizer",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/vocab.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 3383407
+              }
+            ]
+          },
+          {
+            "id": "Qwen--Qwen-Image--pipeline--transformer",
+            "name": "transformer",
+            "component_type": "QwenImageTransformer2DModel",
+            "artifacts": [
+              {
+                "id": "Qwen--Qwen-Image--pipeline--transformer--art--0",
+                "name": "diffusion_pytorch_model.safetensors",
+                "artifact_type": "weights_sharded",
+                "is_sharded": true,
+                "index_file": "transformer/diffusion_pytorch_model.safetensors.index.json",
+                "files": [
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00001-of-00009.safetensors"
+                  },
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00002-of-00009.safetensors"
+                  },
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00003-of-00009.safetensors"
+                  },
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00004-of-00009.safetensors"
+                  },
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00005-of-00009.safetensors"
+                  },
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00006-of-00009.safetensors"
+                  },
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00007-of-00009.safetensors"
+                  },
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00008-of-00009.safetensors"
+                  },
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00009-of-00009.safetensors"
+                  }
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 40861027880
+              },
+              {
+                "id": "Qwen--Qwen-Image--pipeline--transformer--art--1",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "transformer/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 371
+              }
+            ]
+          },
+          {
+            "id": "Qwen--Qwen-Image--pipeline--vae",
+            "name": "vae",
+            "component_type": "AutoencoderKLQwenImage",
+            "artifacts": [
+              {
+                "id": "Qwen--Qwen-Image--pipeline--vae--art--0",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "vae/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 730
+              },
+              {
+                "id": "Qwen--Qwen-Image--pipeline--vae--art--1",
+                "name": "diffusion_pytorch_model.safetensors",
+                "artifact_type": "weights",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "vae/diffusion_pytorch_model.safetensors"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 253806966
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stabilityai/stable-video-diffusion-img2vid-xt",
+    "commit_sha": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+    "gated": false,
+    "updated_at": "2026-08-21T06:08:06.774090",
+    "units": [
+      {
+        "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline",
+        "name": "stable-video-diffusion-img2vid-xt-pipeline",
+        "unit_type": "pipeline",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "fp16",
+        "quantization": null,
+        "artifacts": [],
+        "components": [
+          {
+            "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--feature_extractor",
+            "name": "feature_extractor",
+            "component_type": "CLIPImageProcessor",
+            "artifacts": [
+              {
+                "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--feature_extractor--art--0",
+                "name": "preprocessor_config.json",
+                "artifact_type": "processor",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "feature_extractor/preprocessor_config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 518
+              }
+            ]
+          },
+          {
+            "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--image_encoder",
+            "name": "image_encoder",
+            "component_type": "CLIPVisionModelWithProjection",
+            "artifacts": [
+              {
+                "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--image_encoder--art--0",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "image_encoder/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 685
+              },
+              {
+                "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--image_encoder--art--1",
+                "name": "model.fp16.safetensors",
+                "artifact_type": "weights",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "image_encoder/model.fp16.safetensors"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 1264217240
+              },
+              {
+                "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--image_encoder--art--2",
+                "name": "model.safetensors",
+                "artifact_type": "weights",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "image_encoder/model.safetensors"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 2528371296
+              }
+            ]
+          },
+          {
+            "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--scheduler",
+            "name": "scheduler",
+            "component_type": "EulerDiscreteScheduler",
+            "artifacts": [
+              {
+                "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--scheduler--art--0",
+                "name": "scheduler_config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "scheduler/scheduler_config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 533
+              }
+            ]
+          },
+          {
+            "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--unet",
+            "name": "unet",
+            "component_type": "UNetSpatioTemporalConditionModel",
+            "artifacts": [
+              {
+                "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--unet--art--0",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "unet/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 984
+              },
+              {
+                "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--unet--art--1",
+                "name": "diffusion_pytorch_model.fp16.safetensors",
+                "artifact_type": "weights",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "unet/diffusion_pytorch_model.fp16.safetensors"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 3049435868
+              },
+              {
+                "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--unet--art--2",
+                "name": "diffusion_pytorch_model.safetensors",
+                "artifact_type": "weights",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "unet/diffusion_pytorch_model.safetensors"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 6098682464
+              }
+            ]
+          },
+          {
+            "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--vae",
+            "name": "vae",
+            "component_type": "AutoencoderKLTemporalDecoder",
+            "artifacts": [
+              {
+                "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--vae--art--0",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "vae/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 607
+              },
+              {
+                "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--vae--art--1",
+                "name": "diffusion_pytorch_model.fp16.safetensors",
+                "artifact_type": "weights",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "vae/diffusion_pytorch_model.fp16.safetensors"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 195531910
+              },
+              {
+                "id": "stabilityai--stable-video-diffusion-img2vid-xt--pipeline--vae--art--2",
+                "name": "diffusion_pytorch_model.safetensors",
+                "artifact_type": "weights",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "vae/diffusion_pytorch_model.safetensors"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 391017740
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "stabilityai--stable-video-diffusion-img2vid-xt--svd_xt",
+        "name": "svd_xt",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "stabilityai--stable-video-diffusion-img2vid-xt--svd_xt--art--0",
+            "name": "svd_xt.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "svd_xt.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 9559625980
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "stabilityai--stable-video-diffusion-img2vid-xt--svd_xt_image_decoder",
+        "name": "svd_xt_image_decoder",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "stabilityai--stable-video-diffusion-img2vid-xt--svd_xt_image_decoder--art--0",
+            "name": "svd_xt_image_decoder.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "svd_xt_image_decoder.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 9503252964
+          }
+        ],
+        "components": []
+      }
+    ]
+  },
+  {
+    "id": "black-forest-labs/FLUX.1-dev",
+    "commit_sha": "3de623fc3c33e44ffbe2bad470d0f45bccf2eb21",
+    "gated": true,
+    "updated_at": "2026-08-21T06:08:06.968845",
+    "units": [
+      {
+        "id": "black-forest-labs--FLUX.1-dev--ae",
+        "name": "ae",
+        "unit_type": "single_checkpoint",
+        "task_type": "text-to-image",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "black-forest-labs--FLUX.1-dev--ae--art--0",
+            "name": "ae.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ae.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 335304388
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "black-forest-labs--FLUX.1-dev--flux1-dev",
+        "name": "flux1-dev",
+        "unit_type": "single_checkpoint",
+        "task_type": "text-to-image",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "black-forest-labs--FLUX.1-dev--flux1-dev--art--0",
+            "name": "flux1-dev.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "flux1-dev.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 23802932552
+          }
+        ],
+        "components": []
+      }
+    ]
+  },
+  {
+    "id": "Lightricks/LTX-Video",
+    "commit_sha": "8984fa25007f376c1a299016d0957a37a2f797bb",
+    "gated": false,
+    "updated_at": "2026-08-21T06:08:07.095820",
+    "units": [
+      {
+        "id": "Lightricks--LTX-Video--pipeline",
+        "name": "LTX-Video-pipeline",
+        "unit_type": "pipeline",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "fp8",
+        "quantization": null,
+        "artifacts": [],
+        "components": [
+          {
+            "id": "Lightricks--LTX-Video--pipeline--scheduler",
+            "name": "scheduler",
+            "component_type": "FlowMatchEulerDiscreteScheduler",
+            "artifacts": [
+              {
+                "id": "Lightricks--LTX-Video--pipeline--scheduler--art--0",
+                "name": "scheduler_config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "scheduler/scheduler_config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 418
+              }
+            ]
+          },
+          {
+            "id": "Lightricks--LTX-Video--pipeline--text_encoder",
+            "name": "text_encoder",
+            "component_type": "T5EncoderModel",
+            "artifacts": [
+              {
+                "id": "Lightricks--LTX-Video--pipeline--text_encoder--art--0",
+                "name": "model.safetensors",
+                "artifact_type": "weights_sharded",
+                "is_sharded": true,
+                "index_file": "text_encoder/model.safetensors.index.json",
+                "files": [
+                  {
+                    "path": "text_encoder/model-00001-of-00004.safetensors"
+                  },
+                  {
+                    "path": "text_encoder/model-00002-of-00004.safetensors"
+                  },
+                  {
+                    "path": "text_encoder/model-00003-of-00004.safetensors"
+                  },
+                  {
+                    "path": "text_encoder/model-00004-of-00004.safetensors"
+                  }
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 19049269744
+              },
+              {
+                "id": "Lightricks--LTX-Video--pipeline--text_encoder--art--1",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "text_encoder/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 781
+              }
+            ]
+          },
+          {
+            "id": "Lightricks--LTX-Video--pipeline--tokenizer",
+            "name": "tokenizer",
+            "component_type": "T5Tokenizer",
+            "artifacts": [
+              {
+                "id": "Lightricks--LTX-Video--pipeline--tokenizer--art--0",
+                "name": "added_tokens.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/added_tokens.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 2593
+              },
+              {
+                "id": "Lightricks--LTX-Video--pipeline--tokenizer--art--1",
+                "name": "special_tokens_map.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/special_tokens_map.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 2543
+              },
+              {
+                "id": "Lightricks--LTX-Video--pipeline--tokenizer--art--2",
+                "name": "spiece.model",
+                "artifact_type": "tokenizer",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/spiece.model"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 791656
+              },
+              {
+                "id": "Lightricks--LTX-Video--pipeline--tokenizer--art--3",
+                "name": "tokenizer_config.json",
+                "artifact_type": "tokenizer",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "tokenizer/tokenizer_config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 20618
+              }
+            ]
+          },
+          {
+            "id": "Lightricks--LTX-Video--pipeline--transformer",
+            "name": "transformer",
+            "component_type": "LTXVideoTransformer3DModel",
+            "artifacts": [
+              {
+                "id": "Lightricks--LTX-Video--pipeline--transformer--art--0",
+                "name": "diffusion_pytorch_model.safetensors",
+                "artifact_type": "weights_sharded",
+                "is_sharded": true,
+                "index_file": "transformer/diffusion_pytorch_model.safetensors.index.json",
+                "files": [
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00001-of-00002.safetensors"
+                  },
+                  {
+                    "path": "transformer/diffusion_pytorch_model-00002-of-00002.safetensors"
+                  }
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 7693622848
+              },
+              {
+                "id": "Lightricks--LTX-Video--pipeline--transformer--art--1",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "transformer/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 500
+              }
+            ]
+          },
+          {
+            "id": "Lightricks--LTX-Video--pipeline--vae",
+            "name": "vae",
+            "component_type": "AutoencoderKLLTXVideo",
+            "artifacts": [
+              {
+                "id": "Lightricks--LTX-Video--pipeline--vae--art--0",
+                "name": "config.json",
+                "artifact_type": "config",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "vae/config.json"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 501
+              },
+              {
+                "id": "Lightricks--LTX-Video--pipeline--vae--art--1",
+                "name": "diffusion_pytorch_model.safetensors",
+                "artifact_type": "weights",
+                "is_sharded": false,
+                "index_file": null,
+                "files": [
+                  "vae/diffusion_pytorch_model.safetensors"
+                ],
+                "status": "discovered",
+                "minio_bucket": null,
+                "minio_prefix": null,
+                "size_bytes": 1676798532
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltx-video-2b-v0.9.1",
+        "name": "ltx-video-2b-v0.9.1",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltx-video-2b-v0.9.1--art--0",
+            "name": "ltx-video-2b-v0.9.1.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltx-video-2b-v0.9.1.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 5716863844
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltx-video-2b-v0.9.5",
+        "name": "ltx-video-2b-v0.9.5",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltx-video-2b-v0.9.5--art--0",
+            "name": "ltx-video-2b-v0.9.5.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltx-video-2b-v0.9.5.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 6340729500
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltx-video-2b-v0.9",
+        "name": "ltx-video-2b-v0.9",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltx-video-2b-v0.9--art--0",
+            "name": "ltx-video-2b-v0.9.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltx-video-2b-v0.9.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 9370442108
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-13b-0.9.7-dev-fp8",
+        "name": "ltxv-13b-0.9.7-dev-fp8",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "fp8",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-13b-0.9.7-dev-fp8--art--0",
+            "name": "ltxv-13b-0.9.7-dev-fp8.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-13b-0.9.7-dev-fp8.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 15694279916
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-13b-0.9.7-dev",
+        "name": "ltxv-13b-0.9.7-dev",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-13b-0.9.7-dev--art--0",
+            "name": "ltxv-13b-0.9.7-dev.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-13b-0.9.7-dev.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 28579183340
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-13b-0.9.7-distilled-fp8",
+        "name": "ltxv-13b-0.9.7-distilled-fp8",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "fp8",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-13b-0.9.7-distilled-fp8--art--0",
+            "name": "ltxv-13b-0.9.7-distilled-fp8.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-13b-0.9.7-distilled-fp8.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 15694280020
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-13b-0.9.7-distilled-lora128",
+        "name": "ltxv-13b-0.9.7-distilled-lora128",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-13b-0.9.7-distilled-lora128--art--0",
+            "name": "ltxv-13b-0.9.7-distilled-lora128.safetensors",
+            "artifact_type": "lora_adapter",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-13b-0.9.7-distilled-lora128.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 1325666536
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-13b-0.9.7-distilled",
+        "name": "ltxv-13b-0.9.7-distilled",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-13b-0.9.7-distilled--art--0",
+            "name": "ltxv-13b-0.9.7-distilled.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-13b-0.9.7-distilled.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 28579183444
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-13b-0.9.8-dev-fp8",
+        "name": "ltxv-13b-0.9.8-dev-fp8",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "fp8",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-13b-0.9.8-dev-fp8--art--0",
+            "name": "ltxv-13b-0.9.8-dev-fp8.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-13b-0.9.8-dev-fp8.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 15694279916
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-13b-0.9.8-dev",
+        "name": "ltxv-13b-0.9.8-dev",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-13b-0.9.8-dev--art--0",
+            "name": "ltxv-13b-0.9.8-dev.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-13b-0.9.8-dev.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 28579183340
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-13b-0.9.8-distilled-fp8",
+        "name": "ltxv-13b-0.9.8-distilled-fp8",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "fp8",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-13b-0.9.8-distilled-fp8--art--0",
+            "name": "ltxv-13b-0.9.8-distilled-fp8.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-13b-0.9.8-distilled-fp8.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 15694280140
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-13b-0.9.8-distilled",
+        "name": "ltxv-13b-0.9.8-distilled",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-13b-0.9.8-distilled--art--0",
+            "name": "ltxv-13b-0.9.8-distilled.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-13b-0.9.8-distilled.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 28579183564
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-2b-0.9.6-dev-04-25",
+        "name": "ltxv-2b-0.9.6-dev-04-25",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-2b-0.9.6-dev-04-25--art--0",
+            "name": "ltxv-2b-0.9.6-dev-04-25.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-2b-0.9.6-dev-04-25.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 6340743924
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-2b-0.9.6-distilled-04-25",
+        "name": "ltxv-2b-0.9.6-distilled-04-25",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-2b-0.9.6-distilled-04-25--art--0",
+            "name": "ltxv-2b-0.9.6-distilled-04-25.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-2b-0.9.6-distilled-04-25.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 6340744028
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-2b-0.9.8-distilled-fp8",
+        "name": "ltxv-2b-0.9.8-distilled-fp8",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "fp8",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-2b-0.9.8-distilled-fp8--art--0",
+            "name": "ltxv-2b-0.9.8-distilled-fp8.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-2b-0.9.8-distilled-fp8.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 4461695684
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-2b-0.9.8-distilled",
+        "name": "ltxv-2b-0.9.8-distilled",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-2b-0.9.8-distilled--art--0",
+            "name": "ltxv-2b-0.9.8-distilled.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-2b-0.9.8-distilled.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 6340744492
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-spatial-upscaler-0.9.7",
+        "name": "ltxv-spatial-upscaler-0.9.7",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-spatial-upscaler-0.9.7--art--0",
+            "name": "ltxv-spatial-upscaler-0.9.7.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-spatial-upscaler-0.9.7.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 505024432
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-spatial-upscaler-0.9.8",
+        "name": "ltxv-spatial-upscaler-0.9.8",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-spatial-upscaler-0.9.8--art--0",
+            "name": "ltxv-spatial-upscaler-0.9.8.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-spatial-upscaler-0.9.8.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 505024432
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-temporal-upscaler-0.9.7",
+        "name": "ltxv-temporal-upscaler-0.9.7",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-temporal-upscaler-0.9.7--art--0",
+            "name": "ltxv-temporal-upscaler-0.9.7.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-temporal-upscaler-0.9.7.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 523894768
+          }
+        ],
+        "components": []
+      },
+      {
+        "id": "Lightricks--LTX-Video--ltxv-temporal-upscaler-0.9.8",
+        "name": "ltxv-temporal-upscaler-0.9.8",
+        "unit_type": "single_checkpoint",
+        "task_type": "image-to-video",
+        "framework": "diffusers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Lightricks--LTX-Video--ltxv-temporal-upscaler-0.9.8--art--0",
+            "name": "ltxv-temporal-upscaler-0.9.8.safetensors",
+            "artifact_type": "weights",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "ltxv-temporal-upscaler-0.9.8.safetensors"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 523894768
+          }
+        ],
+        "components": []
+      }
+    ]
+  },
+  {
+    "id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "commit_sha": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+    "gated": false,
+    "updated_at": "2026-08-21T06:08:07.293655",
+    "units": [
+      {
+        "id": "Qwen--Qwen2.5-Coder-7B-Instruct--main",
+        "name": "Qwen2.5-Coder-7B-Instruct",
+        "unit_type": "monolithic",
+        "task_type": "text-generation",
+        "framework": "transformers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Qwen--Qwen2.5-Coder-7B-Instruct--main--art--0",
+            "name": "model.safetensors",
+            "artifact_type": "weights_sharded",
+            "is_sharded": true,
+            "index_file": "model.safetensors.index.json",
+            "files": [
+              {
+                "path": "model-00001-of-00004.safetensors"
+              },
+              {
+                "path": "model-00002-of-00004.safetensors"
+              },
+              {
+                "path": "model-00003-of-00004.safetensors"
+              },
+              {
+                "path": "model-00004-of-00004.safetensors"
+              }
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 15231271864
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-7B-Instruct--main--art--1",
+            "name": ".gitattributes",
+            "artifact_type": "metadata",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              ".gitattributes"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 1519
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-7B-Instruct--main--art--2",
+            "name": "LICENSE",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "LICENSE"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 11343
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-7B-Instruct--main--art--3",
+            "name": "README.md",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "README.md"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 6392
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-7B-Instruct--main--art--4",
+            "name": "config.json",
+            "artifact_type": "config",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 663
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-7B-Instruct--main--art--5",
+            "name": "generation_config.json",
+            "artifact_type": "config",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "generation_config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 242
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-7B-Instruct--main--art--6",
+            "name": "merges.txt",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "merges.txt"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 1671839
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-7B-Instruct--main--art--7",
+            "name": "tokenizer.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "tokenizer.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 7031645
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-7B-Instruct--main--art--8",
+            "name": "tokenizer_config.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "tokenizer_config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 7305
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-7B-Instruct--main--art--9",
+            "name": "vocab.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "vocab.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 2776833
+          }
+        ],
+        "components": []
+      }
+    ]
+  },
+  {
+    "id": "Qwen/Qwen2.5-Coder-14B-Instruct",
+    "commit_sha": "aedcc2d42b622764e023cf882b6652e646b95671",
+    "gated": false,
+    "updated_at": "2026-08-21T06:08:07.497734",
+    "units": [
+      {
+        "id": "Qwen--Qwen2.5-Coder-14B-Instruct--main",
+        "name": "Qwen2.5-Coder-14B-Instruct",
+        "unit_type": "monolithic",
+        "task_type": "text-generation",
+        "framework": "transformers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Qwen--Qwen2.5-Coder-14B-Instruct--main--art--0",
+            "name": "model.safetensors",
+            "artifact_type": "weights_sharded",
+            "is_sharded": true,
+            "index_file": "model.safetensors.index.json",
+            "files": [
+              {
+                "path": "model-00001-of-00006.safetensors"
+              },
+              {
+                "path": "model-00002-of-00006.safetensors"
+              },
+              {
+                "path": "model-00003-of-00006.safetensors"
+              },
+              {
+                "path": "model-00004-of-00006.safetensors"
+              },
+              {
+                "path": "model-00005-of-00006.safetensors"
+              },
+              {
+                "path": "model-00006-of-00006.safetensors"
+              }
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 29540133960
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-14B-Instruct--main--art--1",
+            "name": ".gitattributes",
+            "artifact_type": "metadata",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              ".gitattributes"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 1519
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-14B-Instruct--main--art--2",
+            "name": "LICENSE",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "LICENSE"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 11343
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-14B-Instruct--main--art--3",
+            "name": "README.md",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "README.md"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 6397
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-14B-Instruct--main--art--4",
+            "name": "config.json",
+            "artifact_type": "config",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 663
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-14B-Instruct--main--art--5",
+            "name": "generation_config.json",
+            "artifact_type": "config",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "generation_config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 243
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-14B-Instruct--main--art--6",
+            "name": "merges.txt",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "merges.txt"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 1671839
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-14B-Instruct--main--art--7",
+            "name": "tokenizer.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "tokenizer.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 7031645
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-14B-Instruct--main--art--8",
+            "name": "tokenizer_config.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "tokenizer_config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 7305
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-14B-Instruct--main--art--9",
+            "name": "vocab.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "vocab.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 2776833
+          }
+        ],
+        "components": []
+      }
+    ]
+  },
+  {
+    "id": "Qwen/Qwen2.5-Coder-32B-Instruct",
+    "commit_sha": "381fc969f78efac66bc87ff7ddeadb7e73c218a7",
+    "gated": false,
+    "updated_at": "2026-08-21T06:08:07.714396",
+    "units": [
+      {
+        "id": "Qwen--Qwen2.5-Coder-32B-Instruct--main",
+        "name": "Qwen2.5-Coder-32B-Instruct",
+        "unit_type": "monolithic",
+        "task_type": "text-generation",
+        "framework": "transformers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Qwen--Qwen2.5-Coder-32B-Instruct--main--art--0",
+            "name": "model.safetensors",
+            "artifact_type": "weights_sharded",
+            "is_sharded": true,
+            "index_file": "model.safetensors.index.json",
+            "files": [
+              {
+                "path": "model-00001-of-00014.safetensors"
+              },
+              {
+                "path": "model-00002-of-00014.safetensors"
+              },
+              {
+                "path": "model-00003-of-00014.safetensors"
+              },
+              {
+                "path": "model-00004-of-00014.safetensors"
+              },
+              {
+                "path": "model-00005-of-00014.safetensors"
+              },
+              {
+                "path": "model-00006-of-00014.safetensors"
+              },
+              {
+                "path": "model-00007-of-00014.safetensors"
+              },
+              {
+                "path": "model-00008-of-00014.safetensors"
+              },
+              {
+                "path": "model-00009-of-00014.safetensors"
+              },
+              {
+                "path": "model-00010-of-00014.safetensors"
+              },
+              {
+                "path": "model-00011-of-00014.safetensors"
+              },
+              {
+                "path": "model-00012-of-00014.safetensors"
+              },
+              {
+                "path": "model-00013-of-00014.safetensors"
+              },
+              {
+                "path": "model-00014-of-00014.safetensors"
+              }
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 65527841688
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-32B-Instruct--main--art--1",
+            "name": ".gitattributes",
+            "artifact_type": "metadata",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              ".gitattributes"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 1519
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-32B-Instruct--main--art--2",
+            "name": "LICENSE",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "LICENSE"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 11343
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-32B-Instruct--main--art--3",
+            "name": "README.md",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "README.md"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 6397
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-32B-Instruct--main--art--4",
+            "name": "config.json",
+            "artifact_type": "config",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 663
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-32B-Instruct--main--art--5",
+            "name": "generation_config.json",
+            "artifact_type": "config",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "generation_config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 243
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-32B-Instruct--main--art--6",
+            "name": "merges.txt",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "merges.txt"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 1671839
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-32B-Instruct--main--art--7",
+            "name": "tokenizer.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "tokenizer.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 7031645
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-32B-Instruct--main--art--8",
+            "name": "tokenizer_config.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "tokenizer_config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 7305
+          },
+          {
+            "id": "Qwen--Qwen2.5-Coder-32B-Instruct--main--art--9",
+            "name": "vocab.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "vocab.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 2776833
+          }
+        ],
+        "components": []
+      }
+    ]
+  },
+  {
+    "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+    "commit_sha": "b2cff646eb4bb1d68355c01b18ae02e7cf42d120",
+    "gated": false,
+    "updated_at": "2026-08-21T06:08:07.906325",
+    "units": [
+      {
+        "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main",
+        "name": "Qwen3-Coder-30B-A3B-Instruct",
+        "unit_type": "monolithic",
+        "task_type": "text-generation",
+        "framework": "transformers",
+        "precision": "unknown",
+        "quantization": null,
+        "artifacts": [
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--0",
+            "name": "model.safetensors",
+            "artifact_type": "weights_sharded",
+            "is_sharded": true,
+            "index_file": "model.safetensors.index.json",
+            "files": [
+              {
+                "path": "model-00001-of-00016.safetensors"
+              },
+              {
+                "path": "model-00002-of-00016.safetensors"
+              },
+              {
+                "path": "model-00003-of-00016.safetensors"
+              },
+              {
+                "path": "model-00004-of-00016.safetensors"
+              },
+              {
+                "path": "model-00005-of-00016.safetensors"
+              },
+              {
+                "path": "model-00006-of-00016.safetensors"
+              },
+              {
+                "path": "model-00007-of-00016.safetensors"
+              },
+              {
+                "path": "model-00008-of-00016.safetensors"
+              },
+              {
+                "path": "model-00009-of-00016.safetensors"
+              },
+              {
+                "path": "model-00010-of-00016.safetensors"
+              },
+              {
+                "path": "model-00011-of-00016.safetensors"
+              },
+              {
+                "path": "model-00012-of-00016.safetensors"
+              },
+              {
+                "path": "model-00013-of-00016.safetensors"
+              },
+              {
+                "path": "model-00014-of-00016.safetensors"
+              },
+              {
+                "path": "model-00015-of-00016.safetensors"
+              },
+              {
+                "path": "model-00016-of-00016.safetensors"
+              }
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 61066575656
+          },
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--1",
+            "name": ".gitattributes",
+            "artifact_type": "metadata",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              ".gitattributes"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 1519
+          },
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--2",
+            "name": "LICENSE",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "LICENSE"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 11343
+          },
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--3",
+            "name": "README.md",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "README.md"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 5425
+          },
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--4",
+            "name": "chat_template.jinja",
+            "artifact_type": "runtime_code",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "chat_template.jinja"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 6211
+          },
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--5",
+            "name": "config.json",
+            "artifact_type": "config",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 963
+          },
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--6",
+            "name": "generation_config.json",
+            "artifact_type": "config",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "generation_config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 180
+          },
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--7",
+            "name": "merges.txt",
+            "artifact_type": "documentation",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "merges.txt"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 1671839
+          },
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--8",
+            "name": "qwen3coder_tool_parser.py",
+            "artifact_type": "runtime_code",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "qwen3coder_tool_parser.py"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 31613
+          },
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--9",
+            "name": "tokenizer.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "tokenizer.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 7032399
+          },
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--10",
+            "name": "tokenizer_config.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "tokenizer_config.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 13055
+          },
+          {
+            "id": "Qwen--Qwen3-Coder-30B-A3B-Instruct--main--art--11",
+            "name": "vocab.json",
+            "artifact_type": "tokenizer",
+            "is_sharded": false,
+            "index_file": null,
+            "files": [
+              "vocab.json"
+            ],
+            "status": "discovered",
+            "minio_bucket": null,
+            "minio_prefix": null,
+            "size_bytes": 2776833
+          }
+        ],
+        "components": []
+      }
+    ]
+  }
+]

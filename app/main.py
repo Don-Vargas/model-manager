@@ -84,6 +84,69 @@ def artifact_to_response(artifact: ArtifactModel):
     }
 
 
+def download_progress_response(artifact: ArtifactModel) -> Dict[str, Any]:
+    """Return download progress and support both legacy and new file metadata."""
+    raw_files = artifact.files or []
+    files = [
+        file_info if isinstance(file_info, dict) else {"path": str(file_info)}
+        for file_info in raw_files
+    ]
+
+    completed_files = sum(
+        file_info.get("download_status") == "available"
+        or (
+            artifact.status in {
+                ArtifactStatus.AVAILABLE.value,
+                ArtifactStatus.VERIFIED.value,
+            }
+            and "download_status" not in file_info
+        )
+        for file_info in files
+    )
+
+    total_bytes = sum(
+        file_info.get("size_bytes") or file_info.get("size") or 0
+        for file_info in files
+    )
+
+    downloaded_bytes = sum(
+        file_info.get("downloaded_bytes")
+        or (
+            (file_info.get("size_bytes") or file_info.get("size") or 0)
+            if artifact.status
+            in {ArtifactStatus.AVAILABLE.value, ArtifactStatus.VERIFIED.value}
+            else 0
+        )
+        for file_info in files
+    )
+
+    unit = artifact.unit or (
+        artifact.component.unit if artifact.component else None
+    )
+
+    return {
+        "artifact_id": artifact.id,
+        "repo_id": unit.repo_id if unit else "unknown",
+        "name": artifact.name,
+        "status": artifact.status,
+        "completed_files": completed_files,
+        "total_files": len(files),
+        "downloaded_bytes": downloaded_bytes,
+        "total_bytes": total_bytes,
+        "progress_percent": (
+            downloaded_bytes / total_bytes * 100 if total_bytes else 0
+        ),
+        "error": next(
+            (
+                file_info.get("download_error")
+                for file_info in files
+                if file_info.get("download_error")
+            ),
+            None,
+        ),
+    }
+
+
 def component_to_response(component):
     return {
         "id": component.id,
@@ -151,29 +214,37 @@ def list_models(
     return [repository_to_response(repo) for repo in repositories]
 
 
-@app.post("/artifacts/{artifact_id}/download")
-def download_artifact(
-    artifact_id: str,
-    db: Session = Depends(get_db),
-):
+def download_artifact_by_id(artifact_id: str, db: Session) -> Dict[str, Any]:
     artifact = get_artifact_or_404(artifact_id, db)
     unit = artifact.unit or (artifact.component.unit if artifact.component else None)
     repo = unit.repository if unit else None
 
     if not repo:
-        raise HTTPException(status_code=400, detail="Artifact is not linked to a valid repository")
+        return {
+            "artifact_id": artifact_id,
+            "status": "error",
+            "detail": "Artifact is not linked to a valid repository",
+        }
 
     provider = HuggingFaceProvider(token=settings.hf_token)
     prefix = f"{repo.id}/{artifact.id}/"
 
     artifact.status = ArtifactStatus.DOWNLOADING.value
+    # Persist progress state before the first network request, so another API request
+    # can immediately show it in the UI.
+    updated_files = []
+    for file_info in artifact.files or []:
+        entry = dict(file_info) if isinstance(file_info, dict) else {"path": str(file_info)}
+        entry.update({"download_status": "pending", "downloaded_bytes": 0, "download_error": None})
+        updated_files.append(entry)
+    artifact.files = updated_files
+
     db.commit()
 
     try:
         files = artifact.files or []
-        updated_files = []
 
-        for file_info in files:
+        for index, file_info in enumerate(files):
             if isinstance(file_info, dict):
                 filename = file_info.get("path")
                 expected_size = file_info.get("size_bytes") or file_info.get("size")
@@ -184,6 +255,14 @@ def download_artifact(
                 expected_checksum = None
 
             object_key = build_artifact_object_key_from_prefix(prefix, filename)
+            updated_files[index]["download_status"] = "downloading"
+            artifact.files = list(updated_files)  # assign a new list so SQLAlchemy tracks JSON changes
+            db.commit()
+
+            def save_progress(downloaded: int, current_index: int = index) -> None:
+                updated_files[current_index]["downloaded_bytes"] = downloaded
+                artifact.files = list(updated_files)
+                db.commit()
 
             result = download_file_to_minio(
                 provider=provider,
@@ -193,13 +272,19 @@ def download_artifact(
                 object_key=object_key,
                 expected_size=expected_size,
                 expected_checksum=expected_checksum,
+                progress_callback=save_progress,
             )
 
-            updated_files.append({
+            updated_files[index].update({
                 "path": filename,
                 "size_bytes": result.get("size", expected_size),
                 "checksum": result.get("checksum", expected_checksum),
+                "downloaded_bytes": result.get("size", expected_size) or 0,
+                "download_status": "available",
+                "download_error": None,
             })
+            artifact.files = list(updated_files)
+            db.commit()
 
         artifact.minio_bucket = storage_settings.minio_bucket
         artifact.minio_prefix = prefix
@@ -208,8 +293,8 @@ def download_artifact(
         db.commit()
 
         return {
-            "status": "available",
             "artifact_id": artifact.id,
+            "status": "available",
             "bucket": storage_settings.minio_bucket,
             "prefix": prefix,
         }
@@ -217,8 +302,64 @@ def download_artifact(
     except Exception as exc:
         db.rollback()
         artifact.status = ArtifactStatus.FAILED.value
+        for entry in updated_files:
+            if entry.get("download_status") in {"pending", "downloading"}:
+                entry["download_status"] = "failed"
+                entry["download_error"] = str(exc)
+                break
+        artifact.files = list(updated_files)
+
         db.commit()
-        raise HTTPException(status_code=500, detail=f"Failed to download artifact files: {exc}")
+        return {
+            "artifact_id": artifact.id,
+            "status": "failed",
+            "detail": str(exc),
+        }
+
+
+@app.post("/artifacts/{artifact_id}/download")
+def download_artifact(
+    artifact_id: str,
+    db: Session = Depends(get_db),
+):
+    result = download_artifact_by_id(artifact_id, db)
+    if result["status"] == "error":
+        raise HTTPException(status_code=400, detail=result["detail"])
+    if result["status"] == "failed":
+        raise HTTPException(status_code=500, detail=f"Failed to download artifact files: {result['detail']}")
+    return result
+
+
+class BatchDownloadRequest(BaseModel):
+    artifact_ids: list[str]
+
+
+@app.post("/artifacts/download-batch")
+def download_artifacts_batch(
+    request: BatchDownloadRequest,
+    db: Session = Depends(get_db),
+):
+    results = []
+    for artifact_id in request.artifact_ids:
+        try:
+            result = download_artifact_by_id(artifact_id, db)
+        except HTTPException as exc:
+            result = {
+                "artifact_id": artifact_id,
+                "status": "error",
+                "detail": exc.detail,
+            }
+        results.append(result)
+
+    succeeded = sum(1 for r in results if r["status"] == "available")
+    failed = len(results) - succeeded
+
+    return {
+        "total": len(results),
+        "succeeded": succeeded,
+        "failed": failed,
+        "results": results,
+    }
 
 
 def verify_artifact_file(
@@ -323,6 +464,13 @@ def verify_artifact(
         "status": "verified" if all_verified else "corrupted",
         "files": results,
     }
+
+
+@app.get("/downloads/status")
+def download_status(db: Session = Depends(get_db)):
+    """Progress for every known artifact; intended for polling by the operator UI."""
+    artifacts = db.query(ArtifactModel).order_by(ArtifactModel.name).all()
+    return {"downloads": [download_progress_response(artifact) for artifact in artifacts]}
 
 
 @app.get("/artifacts/{artifact_id}")
