@@ -1,0 +1,764 @@
+{
+  "_id": "672379b045bf745cb0f1a79a",
+  "author": "Lightricks",
+  "base_models": null,
+  "cardData": {
+    "base_model": null,
+    "datasets": null,
+    "eval_results": null,
+    "language": [
+      "en"
+    ],
+    "library_name": "diffusers",
+    "license": "other",
+    "license_link": null,
+    "license_name": null,
+    "metrics": null,
+    "model_name": null,
+    "pinned": true,
+    "pipeline_tag": null,
+    "tags": [
+      "ltx-video",
+      "image-to-video"
+    ]
+  },
+  "card_data": {
+    "base_model": null,
+    "datasets": null,
+    "eval_results": null,
+    "language": [
+      "en"
+    ],
+    "library_name": "diffusers",
+    "license": "other",
+    "license_link": null,
+    "license_name": null,
+    "metrics": null,
+    "model_name": null,
+    "pinned": true,
+    "pipeline_tag": null,
+    "tags": [
+      "ltx-video",
+      "image-to-video"
+    ]
+  },
+  "children_model_count": null,
+  "config": {
+    "diffusers": {
+      "_class_name": "LTXPipeline"
+    }
+  },
+  "created_at": "2024-10-31 12:36:00+00:00",
+  "disabled": false,
+  "downloads": 489214,
+  "downloads_all_time": null,
+  "eval_results": null,
+  "gated": false,
+  "gguf": null,
+  "id": "Lightricks/LTX-Video",
+  "inference": null,
+  "inference_provider_mapping": null,
+  "lastModified": "2025-07-16 14:32:35+00:00",
+  "last_modified": "2025-07-16 14:32:35+00:00",
+  "library_name": "diffusers",
+  "likes": 2271,
+  "mask_token": null,
+  "modelId": "Lightricks/LTX-Video",
+  "model_index": null,
+  "pipeline_tag": "image-to-video",
+  "private": false,
+  "resource_group": null,
+  "safetensors": {
+    "parameters": {
+      "F32": 1923385472
+    },
+    "total": 1923385472
+  },
+  "security_repo_status": null,
+  "sha": "8984fa25007f376c1a299016d0957a37a2f797bb",
+  "siblings": [
+    {
+      "blob_id": "38964bc506d174ae084323d3e4c4fcc8841a68c1",
+      "lfs": null,
+      "rfilename": ".gitattributes",
+      "size": 3407
+    },
+    {
+      "blob_id": "f4957bf5f24d46019a68ec26eb1299bb80738c32",
+      "lfs": null,
+      "rfilename": "LTX-Video-Open-Weights-License-0.X.txt",
+      "size": 14536
+    },
+    {
+      "blob_id": "6ca967542d4a5c36aa0ad96283468e0e57f467d9",
+      "lfs": null,
+      "rfilename": "README.md",
+      "size": 21065
+    },
+    {
+      "blob_id": "38f883d749fa411ae45dd8210915ac417761be89",
+      "lfs": null,
+      "rfilename": "ltx-video-2b-v0.9.1.license.txt",
+      "size": 15981
+    },
+    {
+      "blob_id": "f9b1dd58357d055b4d007f71c670e89191e71d71",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "a23200896c5eddf215c7cb9517820c5763a2b054eb62ba86cbce6b871a4577e3",
+        "size": 5716863844
+      },
+      "rfilename": "ltx-video-2b-v0.9.1.safetensors",
+      "size": 5716863844
+    },
+    {
+      "blob_id": "a92866ad2abbe5b5ac041d1cf3de8f4f01164931",
+      "lfs": null,
+      "rfilename": "ltx-video-2b-v0.9.5.license.txt",
+      "size": 16061
+    },
+    {
+      "blob_id": "54452565d62a9e901b5d4bfea2117903ab754fbf",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "720d15c9f19f7d0f6b2a92bbbc34410e2cfb2f6856a100b38f734fbf973d4adf",
+        "size": 6340729500
+      },
+      "rfilename": "ltx-video-2b-v0.9.5.safetensors",
+      "size": 6340729500
+    },
+    {
+      "blob_id": "e648fea9e017a877cfa11f8edd0da536f714976c",
+      "lfs": null,
+      "rfilename": "ltx-video-2b-v0.9.license.txt",
+      "size": 16046
+    },
+    {
+      "blob_id": "d3be4a8f8ba8dbca7ef7df4a6789b794d9bf3f0c",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "45369c2ae94e3949b127ef99ca9fe173b077f1ca0fecf8185e4115afcbc09581",
+        "size": 9370442108
+      },
+      "rfilename": "ltx-video-2b-v0.9.safetensors",
+      "size": 9370442108
+    },
+    {
+      "blob_id": "6483bf1895d2f8994b11a98653c1d2d0d9ba4c4a",
+      "lfs": {
+        "pointer_size": 136,
+        "sha256": "b281bbb53b76d25a02285c148212b32daa6a57dfa46ce804c9bddba46f948c94",
+        "size": 15694279916
+      },
+      "rfilename": "ltxv-13b-0.9.7-dev-fp8.safetensors",
+      "size": 15694279916
+    },
+    {
+      "blob_id": "aeac2a72c0b05829c07dbe51182ed45767fa72b1",
+      "lfs": {
+        "pointer_size": 136,
+        "sha256": "56b39a874ef9d0c7ad4099954f0ee4fa7e600ce83a24b3736f9e12223e7c71be",
+        "size": 28579183340
+      },
+      "rfilename": "ltxv-13b-0.9.7-dev.safetensors",
+      "size": 28579183340
+    },
+    {
+      "blob_id": "e2bf6828a606b46ce196fda886e545d42fb7f2c8",
+      "lfs": {
+        "pointer_size": 136,
+        "sha256": "d79f419b7203070410b095ccbc4353688d3ef976d7f713a79e6b90ea54675b87",
+        "size": 15694280020
+      },
+      "rfilename": "ltxv-13b-0.9.7-distilled-fp8.safetensors",
+      "size": 15694280020
+    },
+    {
+      "blob_id": "4ac61fbd08fc00f90ac084d190a4ad103b534e91",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "c6004b2d7b29d735f149912f80ae8689833c3dc0e01c215a8a17920e8cd5b145",
+        "size": 1325666536
+      },
+      "rfilename": "ltxv-13b-0.9.7-distilled-lora128.safetensors",
+      "size": 1325666536
+    },
+    {
+      "blob_id": "073c1b76ca3a3f322adf5c0672cb88e49b26e1cd",
+      "lfs": {
+        "pointer_size": 136,
+        "sha256": "ae3b07c28f19e8eec97345e5d0142aca88a105e2e4fd581ec68e4efb17679943",
+        "size": 28579183444
+      },
+      "rfilename": "ltxv-13b-0.9.7-distilled.safetensors",
+      "size": 28579183444
+    },
+    {
+      "blob_id": "6483bf1895d2f8994b11a98653c1d2d0d9ba4c4a",
+      "lfs": {
+        "pointer_size": 136,
+        "sha256": "b281bbb53b76d25a02285c148212b32daa6a57dfa46ce804c9bddba46f948c94",
+        "size": 15694279916
+      },
+      "rfilename": "ltxv-13b-0.9.8-dev-fp8.safetensors",
+      "size": 15694279916
+    },
+    {
+      "blob_id": "aeac2a72c0b05829c07dbe51182ed45767fa72b1",
+      "lfs": {
+        "pointer_size": 136,
+        "sha256": "56b39a874ef9d0c7ad4099954f0ee4fa7e600ce83a24b3736f9e12223e7c71be",
+        "size": 28579183340
+      },
+      "rfilename": "ltxv-13b-0.9.8-dev.safetensors",
+      "size": 28579183340
+    },
+    {
+      "blob_id": "6d1834a89e70c2c1e01229ca8d5345fc56fe2aa5",
+      "lfs": {
+        "pointer_size": 136,
+        "sha256": "111a3d07baa17f520e98b571e7916139ae0865c9a24b7534529d6b9e74264db3",
+        "size": 15694280140
+      },
+      "rfilename": "ltxv-13b-0.9.8-distilled-fp8.safetensors",
+      "size": 15694280140
+    },
+    {
+      "blob_id": "dcac024fc00b6b4d404e605437b8e3d59a684ed1",
+      "lfs": {
+        "pointer_size": 136,
+        "sha256": "2c5f814744f04d8118e0b5bbfc0742655b51e41a6c090da66fde2936d651a9c9",
+        "size": 28579183564
+      },
+      "rfilename": "ltxv-13b-0.9.8-distilled.safetensors",
+      "size": 28579183564
+    },
+    {
+      "blob_id": "349b07d96f6e7e680c6bbfc67c25234abb5db03f",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "e6fb3fe995e23c1f2457bc26c554789a8d74718c17f1853baab33939bd8dfb56",
+        "size": 6340743924
+      },
+      "rfilename": "ltxv-2b-0.9.6-dev-04-25.safetensors",
+      "size": 6340743924
+    },
+    {
+      "blob_id": "dbc6be97210c3cdb07b9b773668f784ce9361c4c",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "94891bd4bd08de30d484befbfc54fdcffe6d1596a131baad700b9baa5e1de86b",
+        "size": 6340744028
+      },
+      "rfilename": "ltxv-2b-0.9.6-distilled-04-25.safetensors",
+      "size": 6340744028
+    },
+    {
+      "blob_id": "56f7f9fc3cd3b8d4d96900444c55390828449e08",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "d6d8fa8ed3a98346787c2503ac80fb5d7cebcf80e356b79a2ba361fbadf97e15",
+        "size": 4461695684
+      },
+      "rfilename": "ltxv-2b-0.9.8-distilled-fp8.safetensors",
+      "size": 4461695684
+    },
+    {
+      "blob_id": "338c04ac14db9216cf979eb5398c1bcdeb4aead3",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "76aa8c4786af752fa6f951947129d5290c3c6c0b2fadcadea6b5e114ae2cad8f",
+        "size": 6340744492
+      },
+      "rfilename": "ltxv-2b-0.9.8-distilled.safetensors",
+      "size": 6340744492
+    },
+    {
+      "blob_id": "e9e26ae49a0d456a378f5ec51753db60a580e4c7",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "5b076031c6f860db9037a54f3bb819f10bfb5532ea26a6d30062292428a0c208",
+        "size": 505024432
+      },
+      "rfilename": "ltxv-spatial-upscaler-0.9.7.safetensors",
+      "size": 505024432
+    },
+    {
+      "blob_id": "e9e26ae49a0d456a378f5ec51753db60a580e4c7",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "5b076031c6f860db9037a54f3bb819f10bfb5532ea26a6d30062292428a0c208",
+        "size": 505024432
+      },
+      "rfilename": "ltxv-spatial-upscaler-0.9.8.safetensors",
+      "size": 505024432
+    },
+    {
+      "blob_id": "f783ac8714d50a47c06d2bbda953d703740fe394",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "92ee7c34a06007da23e83c9c2db1ea74344d95a3b8baa6a3a1d18a0aa20a39b8",
+        "size": 523894768
+      },
+      "rfilename": "ltxv-temporal-upscaler-0.9.7.safetensors",
+      "size": 523894768
+    },
+    {
+      "blob_id": "f783ac8714d50a47c06d2bbda953d703740fe394",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "92ee7c34a06007da23e83c9c2db1ea74344d95a3b8baa6a3a1d18a0aa20a39b8",
+        "size": 523894768
+      },
+      "rfilename": "ltxv-temporal-upscaler-0.9.8.safetensors",
+      "size": 523894768
+    },
+    {
+      "blob_id": "19ff700c5b0bed1764d4a9afe27345312bdbb36c",
+      "lfs": {
+        "pointer_size": 132,
+        "sha256": "b679f14a09d2321b7e34b3ecd23bc01c2cfa75c8d4214a1e59af09826003e2ec",
+        "size": 7963919
+      },
+      "rfilename": "media/ltx-video_example_00001.gif",
+      "size": 7963919
+    },
+    {
+      "blob_id": "58a0a4ad9847e37fae7979070972dd84450370c8",
+      "lfs": {
+        "pointer_size": 132,
+        "sha256": "87fdb9556c1218db4b929994e9b807d1d63f4676defef5b418a4edb1ddaa8422",
+        "size": 5732587
+      },
+      "rfilename": "media/ltx-video_example_00005.gif",
+      "size": 5732587
+    },
+    {
+      "blob_id": "20530b822d0821a51efd852b2341563c4b70b431",
+      "lfs": {
+        "pointer_size": 128,
+        "sha256": "ac92edd9c2e738d49301641f65cf22bfce101e69aabc4d470f422db629b66e21",
+        "size": 132
+      },
+      "rfilename": "media/ltx-video_example_00006.gif",
+      "size": 132
+    },
+    {
+      "blob_id": "e5b9d22f2327d4e8db57ed5ec614f4287d243775",
+      "lfs": {
+        "pointer_size": 128,
+        "sha256": "68d15278b9d7afe43306a531ba9329cb4cb453b9f2097522f1f0a0b26c50a1a7",
+        "size": 132
+      },
+      "rfilename": "media/ltx-video_example_00007.gif",
+      "size": 132
+    },
+    {
+      "blob_id": "999b04171b2b4087728498cf940b7664cd9c3829",
+      "lfs": {
+        "pointer_size": 132,
+        "sha256": "bcf1e084e936a75eaae73a29f60935c469b1fc34eb3f5ad89483e88b3a2eaffe",
+        "size": 6193172
+      },
+      "rfilename": "media/ltx-video_example_00010.gif",
+      "size": 6193172
+    },
+    {
+      "blob_id": "74030221cf581f8d2924678ffc19d33e32d75e79",
+      "lfs": {
+        "pointer_size": 128,
+        "sha256": "15b67e58e7bc50b23ad81f81b439fbbbd630a825202ddca47d5e0990bbaf6bfc",
+        "size": 132
+      },
+      "rfilename": "media/ltx-video_example_00011.gif",
+      "size": 132
+    },
+    {
+      "blob_id": "a32a9ca7f6d30b6759af80d52d46a0a027dc278e",
+      "lfs": {
+        "pointer_size": 132,
+        "sha256": "aa7eb790b43f8a55c01d1fbed4c7a7f657fb2ca78a9685833cf9cb558d2002c1",
+        "size": 9024843
+      },
+      "rfilename": "media/ltx-video_example_00013.gif",
+      "size": 9024843
+    },
+    {
+      "blob_id": "7f697402dca6720faa090ac028fea922e2d3bb2a",
+      "lfs": {
+        "pointer_size": 128,
+        "sha256": "ae7c3cdb08be3d6c8c627d62da4b3cfe58b8cd7d4e0a57c503ffbfc66c4be2eb",
+        "size": 132
+      },
+      "rfilename": "media/ltx-video_example_00014.gif",
+      "size": 132
+    },
+    {
+      "blob_id": "0f9c892b1ec55091897b4ac32a426cc69dee22db",
+      "lfs": {
+        "pointer_size": 128,
+        "sha256": "af8e94d5b9823791bac54734975ea53f389c6b7aee5587a2bb58af1da0412161",
+        "size": 132
+      },
+      "rfilename": "media/ltx-video_example_00015.gif",
+      "size": 132
+    },
+    {
+      "blob_id": "52235614b4b7b8c5f95a4c7224b043f4d7b1704b",
+      "lfs": {
+        "pointer_size": 132,
+        "sha256": "51e7f2ef92a9a2296e7ce9b40a118033b26372838befdd3d2281819c438ee928",
+        "size": 9285683
+      },
+      "rfilename": "media/ltx-video_i2v_example_00001.gif",
+      "size": 9285683
+    },
+    {
+      "blob_id": "a67cf84e18f1b88fb39fbb1ee8734f46ee788c59",
+      "lfs": {
+        "pointer_size": 133,
+        "sha256": "0bd2c1314587efc0b8b7656d6634fbcc3a2045801441bf139bab7726275fa353",
+        "size": 20393804
+      },
+      "rfilename": "media/ltx-video_i2v_example_00002.gif",
+      "size": 20393804
+    },
+    {
+      "blob_id": "f2357085aedf42cf2fdcf422be14d9d095799304",
+      "lfs": {
+        "pointer_size": 132,
+        "sha256": "bb62a79340882b490d11e05de0427e4efad3dca19a55e003ef92889613b67825",
+        "size": 9825156
+      },
+      "rfilename": "media/ltx-video_i2v_example_00003.gif",
+      "size": 9825156
+    },
+    {
+      "blob_id": "36eb08cfbf81e0e38f8f183214d849e9565052d4",
+      "lfs": {
+        "pointer_size": 133,
+        "sha256": "151cb985a1622512b656288b1a1cba7906a34678a2fd9ae6e25611e330a0f9bb",
+        "size": 15691608
+      },
+      "rfilename": "media/ltx-video_i2v_example_00004.gif",
+      "size": 15691608
+    },
+    {
+      "blob_id": "d140b07c084df16685f829a68e433f4d43e56c45",
+      "lfs": {
+        "pointer_size": 133,
+        "sha256": "6280efa40b66a50a8a32fddc0e81a55081e8c8efef56a54229ea4e7f2ae4309d",
+        "size": 10329925
+      },
+      "rfilename": "media/ltx-video_i2v_example_00005.gif",
+      "size": 10329925
+    },
+    {
+      "blob_id": "36e58fc930bb28fdf7d0a553653cf7760e90e95c",
+      "lfs": {
+        "pointer_size": 133,
+        "sha256": "da23e79524a6427959b20809e392555ab4336881ade20001e5ae276d662ed291",
+        "size": 11936674
+      },
+      "rfilename": "media/ltx-video_i2v_example_00006.gif",
+      "size": 11936674
+    },
+    {
+      "blob_id": "efdba350106c344ca755cdf343dbcabc93032b04",
+      "lfs": {
+        "pointer_size": 133,
+        "sha256": "9bcfe336e823925ace248f3ad517df791986c00a1a3c375bac2cb433154ca133",
+        "size": 11755718
+      },
+      "rfilename": "media/ltx-video_i2v_example_00007.gif",
+      "size": 11755718
+    },
+    {
+      "blob_id": "125810eb0b029088420679f74e8eaaa3fc279203",
+      "lfs": {
+        "pointer_size": 133,
+        "sha256": "706368111eda5331dca089e9231bb272a2e61a6b231bd13876ac442cb9d78019",
+        "size": 14716658
+      },
+      "rfilename": "media/ltx-video_i2v_example_00008.gif",
+      "size": 14716658
+    },
+    {
+      "blob_id": "f69d9f86ef03d61001d0d2c12dc7af5790cf051c",
+      "lfs": {
+        "pointer_size": 133,
+        "sha256": "a9c13259e01485c16148dc6681922cc3a748c2f7b52ff7e208c3ffc5ab71397d",
+        "size": 16848341
+      },
+      "rfilename": "media/ltx-video_i2v_example_00009.gif",
+      "size": 16848341
+    },
+    {
+      "blob_id": "a5e8adc22f120d231e312bd216eb79ae208fe821",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "fe193ca2f5d61ff2c2707efd22c1e76517f7f070896ceec58c9bec0738c6599c",
+        "size": 147294304
+      },
+      "rfilename": "media/trailer.gif",
+      "size": 147294304
+    },
+    {
+      "blob_id": "d8ced17af6bd0c916329b02252c51671d8883b9a",
+      "lfs": null,
+      "rfilename": "model_index.json",
+      "size": 412
+    },
+    {
+      "blob_id": "5c4c25f47d1714f7ad68b73fbcecc2d7deb68c37",
+      "lfs": null,
+      "rfilename": "scheduler/scheduler_config.json",
+      "size": 418
+    },
+    {
+      "blob_id": "f275773219a8b09538cf72276cf7b3cd8c4b4675",
+      "lfs": null,
+      "rfilename": "text_encoder/config.json",
+      "size": 781
+    },
+    {
+      "blob_id": "18c5aabb9b2b13497a1d695dca7c6aa53010ab12",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "7a68b2c8c080696a10109612a649bc69330991ecfea65930ccfdfbdb011f2686",
+        "size": 4989319680
+      },
+      "rfilename": "text_encoder/model-00001-of-00004.safetensors",
+      "size": 4989319680
+    },
+    {
+      "blob_id": "99a5b982f77018015431bcac90f77fb50ef2485b",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "b8ed6556d7507e38af5b428c605fb2a6f2bdb7e80bd481308b865f7a40c551ca",
+        "size": 4999830656
+      },
+      "rfilename": "text_encoder/model-00002-of-00004.safetensors",
+      "size": 4999830656
+    },
+    {
+      "blob_id": "03e07005d6976043a9bbe738c61e39a60ebabaca",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "c831635f83041f83faf0024b39c6ecb21b45d70dd38a63ea5bac6c7c6e5e558c",
+        "size": 4865612720
+      },
+      "rfilename": "text_encoder/model-00003-of-00004.safetensors",
+      "size": 4865612720
+    },
+    {
+      "blob_id": "2c6513c8a7cfd4f59f71837c19fb28bfc5aae25e",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "02a5f2d69205be92ad48fe5d712d38c2ff55627969116aeffc58bd75a28da468",
+        "size": 4194506688
+      },
+      "rfilename": "text_encoder/model-00004-of-00004.safetensors",
+      "size": 4194506688
+    },
+    {
+      "blob_id": "0900b8ebd70052d4cccc2eacf6e07d75bb1f9cb8",
+      "lfs": null,
+      "rfilename": "text_encoder/model.safetensors.index.json",
+      "size": 19886
+    },
+    {
+      "blob_id": "3f5132007c4fcf42b75b65c8b6aa49c7098bcdf4",
+      "lfs": null,
+      "rfilename": "tokenizer/added_tokens.json",
+      "size": 2593
+    },
+    {
+      "blob_id": "17ade346a1042cbe0c1436f5bedcbd85c099d582",
+      "lfs": null,
+      "rfilename": "tokenizer/special_tokens_map.json",
+      "size": 2543
+    },
+    {
+      "blob_id": "317a5ccbde45300f5d1d970d4d449af2108b147e",
+      "lfs": {
+        "pointer_size": 131,
+        "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+        "size": 791656
+      },
+      "rfilename": "tokenizer/spiece.model",
+      "size": 791656
+    },
+    {
+      "blob_id": "1f869cb65e8c3d5f44997e57f4c9aaece8bf6bc0",
+      "lfs": null,
+      "rfilename": "tokenizer/tokenizer_config.json",
+      "size": 20618
+    },
+    {
+      "blob_id": "77dfea2348d8865509d7665cc9bb8ef9ad206c4a",
+      "lfs": null,
+      "rfilename": "transformer/config.json",
+      "size": 500
+    },
+    {
+      "blob_id": "890d3d28965fed0a3570a38121ce5ba76be9c0df",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "8acd3e0bda74f7434259a4543a324211ddd82580fcc727df236b2414591eadc8",
+        "size": 4939189200
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00001-of-00002.safetensors",
+      "size": 4939189200
+    },
+    {
+      "blob_id": "c6047ee447dfc2a69d397f873ca09877bbd91051",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "03b3c822c31e1a9e00f6f575aa1b6f3cc4cc3797f60dcced537c8600bf1e9019",
+        "size": 2754433648
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00002-of-00002.safetensors",
+      "size": 2754433648
+    },
+    {
+      "blob_id": "410d294753c04db46910076eb46de4408464ac70",
+      "lfs": null,
+      "rfilename": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "size": 72060
+    },
+    {
+      "blob_id": "3a9d81963b21d0c4cfba102fff93676852b52588",
+      "lfs": null,
+      "rfilename": "vae/config.json",
+      "size": 501
+    },
+    {
+      "blob_id": "b54a6cc983dc813ed65d6a6168e95e8fa11c5036",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "265ca87cb5dff5e37f924286e957324e282fe7710a952a7dafc0df43883e2010",
+        "size": 1676798532
+      },
+      "rfilename": "vae/diffusion_pytorch_model.safetensors",
+      "size": 1676798532
+    }
+  ],
+  "spaces": [
+    "Lightricks/ltx-video-distilled",
+    "victor/LongCat-Video-Avatar-1.5",
+    "eduagarcia/multilingual-tokenizer-leaderboard",
+    "PR-Puppets/PR-Puppet-Sora",
+    "jbilcke-hf/tikslop",
+    "TIGER-Lab/GenAI-Arena",
+    "FINAL-Bench/all-bench-leaderboard",
+    "Lightricks/ltx-video-iclora",
+    "jbilcke-hf/VideoModelStudio",
+    "linoyts/LTXV-lora-the-explorer",
+    "dhuynh95/screenshot_to_html",
+    "1inkusFace/LTXImageToVideoPipeline_D",
+    "ninjawick/PR-Puppet-Sora-2",
+    "Opera8/LongCat-Video-Avatar-1.5-2nd1",
+    "DeepRat/LTX-Video-ZeroGPU-Optimized",
+    "prithivMLmods/NAVA-Text-to-Video",
+    "meituan-longcat/LongCat-Video-Avatar-1.5-Demo",
+    "freddyaboulton/ltx-video-distilled",
+    "ismailkattakath/BFS-Best-Face-Swap-Video",
+    "cocktailpeanut/LTX-Video-Playground",
+    "azhan77168/video",
+    "akhaliq/LongCat-Video-Avatar-1.5",
+    "hugging-science/inference-checkpoint-saver",
+    "RTLit/Copy",
+    "tsqn/LTX-Video-Playground",
+    "ford442/LTX-Video",
+    "akthangdz/TEXT_TO_VIDEO",
+    "1inkusFace/LTX-Video-Xora",
+    "vyloup/LTX-Video-Playground",
+    "victor/ltx-video-distilled",
+    "fffiloni/text2any-batch-hf-jobs-orchestration",
+    "build-small-hackathon/deathmatch",
+    "svjack/LTX-Video-Playground",
+    "KingNish/ltx-video-distilled",
+    "NoobDoge/Multi_Ref_Edit",
+    "arudradey/all-bench-leaderboard",
+    "kevalfst/visionary-ai",
+    "smartfeed/turbo_fe",
+    "wam69/Lightricks-LTX-Video",
+    "build-small-hackathon/tricket",
+    "emilalvaro/LTX-Video-Playground",
+    "Kaskatraz/LTX-Video-Playground",
+    "maffia/vace-demo",
+    "Streamliteeeee/Lightricks-LTX-Video",
+    "miannry/Lightricks-LTX-Video",
+    "InDetail/Lightricks-LTX-Video",
+    "makululinux/ltx-video-distilled",
+    "kenxxaman/Lightricks-LTX-Video",
+    "aaboode/Lightricks-LTX-Video",
+    "Bagda/VidDubhindiX",
+    "rejson/Jaku-vid",
+    "ford442/ltx-video-distilled",
+    "Carlexx/Aduc-srd_Novim",
+    "EU-IA/Aduc-sdr-VIDEO",
+    "XCarleX/Aduc-sdr-cinematic-videoX",
+    "XCarleX/ltx-video-distilled12",
+    "doxaras/ltx-video-generator",
+    "Vatersaft/ltx-video-distilled",
+    "Jessy009/Solune1",
+    "Shaurys/Lightricks-LTX-Video",
+    "zeeburgers/LongCat-Video-Avatar-1.5",
+    "5trg/un",
+    "drizzymedia/V8",
+    "dan-ai-studio/my-ai-studio",
+    "somillll1/ltx-2.3-cinematic-vae-demo",
+    "NativeAngels/LTX-Video-Playground",
+    "Swaqgame99/LTX-Video-Playground",
+    "ylues/PR-Puppet-Sora",
+    "Konst2021/PR-Puppet-Sora",
+    "alexlevy0/PR-Puppet-Sora",
+    "k11112/LTX-Video-Playground",
+    "Masterdqqq/PR-Puppet-Sora",
+    "AashishNKumar/proj11",
+    "riflecreek/LTX-Video-Playground",
+    "kostadinkostad/LTX-Video-Playground",
+    "K00B404/LTX-Video-Playground",
+    "tsoe/sora",
+    "constant999/LTX-Video-Playground",
+    "Lezzio/LTX-Video-Playground",
+    "Greekmongoose/LTX-Video-Playground",
+    "PeldelnasGranell/LTX-Video-Playground",
+    "learningloop/LTX-Video-Playground",
+    "waloneai/LTX-Video_demo_newgenai",
+    "waloneai/fastvideogen",
+    "Tusharcrusty1/LTX-Video-Playground",
+    "sitonmyface/LTX-Video-Playground",
+    "nasiye969/LTX-Video-Playground",
+    "quangnhat/QNT-StudioDesign",
+    "WillybotAI77777/LTX-Video-Playground",
+    "Pablosolaris/LTX-Video-Playground",
+    "life-efficient/toolkit",
+    "svjack/VideoModelStudio",
+    "cziter15pl/LTX-Video-Playground",
+    "svjack/LTXImageToVideoPipeline_D",
+    "Yungleesky77/Lightricks-LTX-Video",
+    "Kenjibusito67/Lightricks-LTX-Video",
+    "Xinyu0168/Lightricks-LTX-Video",
+    "tktrev/Lightricks-LTX-Video",
+    "petenka06/Lightricks-LTX-Video",
+    "dtupidkids/Lightricks-LTX-Video19898312"
+  ],
+  "tags": [
+    "diffusers",
+    "safetensors",
+    "ltx-video",
+    "image-to-video",
+    "en",
+    "license:other",
+    "diffusers:LTXPipeline",
+    "region:us"
+  ],
+  "transformersInfo": null,
+  "transformers_info": null,
+  "trending_score": null,
+  "used_storage": 280845211099,
+  "widget_data": null
+}

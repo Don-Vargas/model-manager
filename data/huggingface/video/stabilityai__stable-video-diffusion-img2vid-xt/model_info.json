@@ -1,0 +1,334 @@
+{
+  "_id": "655befb36d02c2b1a9284bf0",
+  "author": "stabilityai",
+  "base_models": null,
+  "cardData": {
+    "base_model": null,
+    "datasets": null,
+    "eval_results": null,
+    "language": null,
+    "library_name": null,
+    "license": "other",
+    "license_link": "LICENSE.md",
+    "license_name": "stable-video-diffusion-community",
+    "metrics": null,
+    "model_name": null,
+    "pipeline_tag": "image-to-video",
+    "tags": null
+  },
+  "card_data": {
+    "base_model": null,
+    "datasets": null,
+    "eval_results": null,
+    "language": null,
+    "library_name": null,
+    "license": "other",
+    "license_link": "LICENSE.md",
+    "license_name": "stable-video-diffusion-community",
+    "metrics": null,
+    "model_name": null,
+    "pipeline_tag": "image-to-video",
+    "tags": null
+  },
+  "children_model_count": null,
+  "config": {
+    "diffusers": {
+      "_class_name": "StableVideoDiffusionPipeline"
+    }
+  },
+  "created_at": "2023-11-20 23:45:55+00:00",
+  "disabled": false,
+  "downloads": 127319,
+  "downloads_all_time": null,
+  "eval_results": null,
+  "gated": false,
+  "gguf": null,
+  "id": "stabilityai/stable-video-diffusion-img2vid-xt",
+  "inference": null,
+  "inference_provider_mapping": null,
+  "lastModified": "2024-07-10 11:43:18+00:00",
+  "last_modified": "2024-07-10 11:43:18+00:00",
+  "library_name": "diffusers",
+  "likes": 3378,
+  "mask_token": null,
+  "modelId": "stabilityai/stable-video-diffusion-img2vid-xt",
+  "model_index": null,
+  "pipeline_tag": "image-to-video",
+  "private": false,
+  "resource_group": null,
+  "safetensors": {
+    "parameters": {
+      "F32": 1524623082
+    },
+    "total": 1524623082
+  },
+  "security_repo_status": null,
+  "sha": "9e43909513c6714f1bc78bcb44d96e733cd242aa",
+  "siblings": [
+    {
+      "blob_id": "78ff5b07c33f29189b6901023fc9f4d5724f31f7",
+      "lfs": null,
+      "rfilename": ".gitattributes",
+      "size": 1571
+    },
+    {
+      "blob_id": "1d9ce2ee1067327543544de197291726e4fc57a4",
+      "lfs": null,
+      "rfilename": "LICENSE.md",
+      "size": 11852
+    },
+    {
+      "blob_id": "16b65b7ca9bd5a548fe89ff5463a1d6733ead1f7",
+      "lfs": null,
+      "rfilename": "README.md",
+      "size": 8156
+    },
+    {
+      "blob_id": "6a355280c143517c8472151ef8715061c6f436b8",
+      "lfs": null,
+      "rfilename": "comparison.png",
+      "size": 146654
+    },
+    {
+      "blob_id": "0d9d33b883843d1b370da781f3943051067e1b2c",
+      "lfs": null,
+      "rfilename": "feature_extractor/preprocessor_config.json",
+      "size": 518
+    },
+    {
+      "blob_id": "1f5518ccff586593a40f4eaf0e75c066dca54bec",
+      "lfs": null,
+      "rfilename": "image_encoder/config.json",
+      "size": 685
+    },
+    {
+      "blob_id": "29848b356a3062d1da3b773a82d62de5e49a8f89",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "ae616c24393dd1854372b0639e5541666f7521cbe219669255e865cb7f89466a",
+        "size": 1264217240
+      },
+      "rfilename": "image_encoder/model.fp16.safetensors",
+      "size": 1264217240
+    },
+    {
+      "blob_id": "ce6103b0c71f00f25075c03e9d5108f15f957310",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "ed1e5af7b4042ca30ec29999a4a5cfcac90b7fb610fd05ace834f2dcbb763eab",
+        "size": 2528371296
+      },
+      "rfilename": "image_encoder/model.safetensors",
+      "size": 2528371296
+    },
+    {
+      "blob_id": "814cc99f8674db1df84d0fff0d4e5535e745d328",
+      "lfs": null,
+      "rfilename": "model_index.json",
+      "size": 496
+    },
+    {
+      "blob_id": "5adcd559625989ca53a08d1b0d317f0071a2f8b0",
+      "lfs": {
+        "pointer_size": 133,
+        "sha256": "2340a9809e36fa9634633c7cc5fd256737c620ba47151726c85173512dc5c8ff",
+        "size": 18630497
+      },
+      "rfilename": "output_tile.gif",
+      "size": 18630497
+    },
+    {
+      "blob_id": "05ea60ddb0d95607f9306e020e4ea355664d0275",
+      "lfs": null,
+      "rfilename": "scheduler/scheduler_config.json",
+      "size": 533
+    },
+    {
+      "blob_id": "834e6b8c6f74a1a5e530eda031edd5c43993b4e2",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "b2652c23d64a1da5f14d55011b9b6dce55f2e72e395719f1cd1f8a079b00a451",
+        "size": 9559625980
+      },
+      "rfilename": "svd_xt.safetensors",
+      "size": 9559625980
+    },
+    {
+      "blob_id": "678dae8b11151c95b7adc710055ba7af1049e7ff",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "99aa889bf6d1ca28e026755b83ba37e3072ad79b45dd4c94fae14bee7482263b",
+        "size": 9503252964
+      },
+      "rfilename": "svd_xt_image_decoder.safetensors",
+      "size": 9503252964
+    },
+    {
+      "blob_id": "2a30c09f6764459c04d7dc10bf5b4bbf1e5ebc73",
+      "lfs": null,
+      "rfilename": "unet/config.json",
+      "size": 984
+    },
+    {
+      "blob_id": "94136ad164b8599413d2c232829bd570fd0aa858",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "9fbc02e90f37d422f5e3a4aeaee95f6629dc8c45ca211b951626e930daf2bddf",
+        "size": 3049435868
+      },
+      "rfilename": "unet/diffusion_pytorch_model.fp16.safetensors",
+      "size": 3049435868
+    },
+    {
+      "blob_id": "d60e3f9ff310ac05f4e57eb84f76f8e2ea006f19",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "7783d82729af04f26ded4641a5952617fe331fc46add332fb9e47674fecc6ad7",
+        "size": 6098682464
+      },
+      "rfilename": "unet/diffusion_pytorch_model.safetensors",
+      "size": 6098682464
+    },
+    {
+      "blob_id": "7c27c35b4e6ab0e705d46306f60d36839b680c03",
+      "lfs": null,
+      "rfilename": "vae/config.json",
+      "size": 607
+    },
+    {
+      "blob_id": "76c1b086f4ca2c1060a3ba7c8dea11d522a67584",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "af602cd0eb4ad6086ec94fbf1438dfb1be5ec9ac03fd0215640854e90d6463a3",
+        "size": 195531910
+      },
+      "rfilename": "vae/diffusion_pytorch_model.fp16.safetensors",
+      "size": 195531910
+    },
+    {
+      "blob_id": "83238b2c25fa37ef2f82d7131dad491ad5a1558b",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "5d92aa595a53d9da9faf594f09910ee869d5d567c8bb0362d5095673c69997d6",
+        "size": 391017740
+      },
+      "rfilename": "vae/diffusion_pytorch_model.safetensors",
+      "size": 391017740
+    }
+  ],
+  "spaces": [
+    "fffiloni/Stand-In",
+    "mediasynthesismuseum/stable-video-diffusion",
+    "wwen1997/Framer",
+    "wangfuyun/AnimateLCM-SVD",
+    "tencent/DepthCrafter",
+    "VIDraft/Portrait-Animation",
+    "fffiloni/SVFR-demo",
+    "PAIR/StreamingT2V",
+    "TencentARC/GeometryCrafter",
+    "fffiloni/AniDoc",
+    "fffiloni/MimicMotion",
+    "fffiloni/svd_keyframe_interpolation",
+    "jhshao/ChronoDepth",
+    "Doubiiu/TrajectoryCrafter",
+    "heheyas/V3D",
+    "mrcuddle/SDXT-Image-To-Video",
+    "vilarin/Diffutoon-ExVideo",
+    "asahi417/stable-video-diffusion-upscale",
+    "haodongli/DVD",
+    "hehao13/CameraCtrl-svd",
+    "alexnasa/ReCamMaster-ZEROGPU",
+    "awacke1/stable-video-diffusion",
+    "waloneai/SDXT-Image-To-Video",
+    "jbilcke-hf/OmniAvatar",
+    "Kvikontent/AI-Movie-Factory",
+    "emmadrex/stable-video-diffusion",
+    "Yanrui95/NormalCrafter",
+    "pablovela5620/mini-nvs-solver",
+    "modelscope/DiffSynth-Painter",
+    "AiGuaratuba/Stable-Video-Diffusion-Img2Vid-10seconds",
+    "HikariDawn/This-and-That",
+    "guardiancc/dance-monkey",
+    "yslan/ObjCtrl-2.5D",
+    "rahul7star/PusaV1",
+    "jbilcke-hf/ReCamMaster",
+    "Boka73/deepsite-project-lohn3",
+    "raymerjacque/Image-To-Video",
+    "Kunbyte/Lumen",
+    "nroggendorff/svd",
+    "CrazyEric/AnimateLCM-SVD",
+    "kevinwang676/Diffutoon",
+    "xinxiaoxin/MimicMotion",
+    "123LETSPLAY/imagetovideo-try1",
+    "DDUF/dduf-my-diffusers-repo",
+    "kevalfst/visionary-ai",
+    "abonline/stable-video-diffusion-img2vid-xt",
+    "Speedofmastery/orynxml-backend",
+    "Aarong81/ai-adult-content-creator-prototype",
+    "Deabsexy/deabsexy-i2v-nsfw-v2zu",
+    "hugging-apps/lip-forcing",
+    "Taf2023/stable-video-diffusion",
+    "quantumcontrol/stable-video-diffusion",
+    "sejamenath2023/stable-video-diffusionv2",
+    "awacke1/StableDiffusionVideoTo3D",
+    "SamarthPersonal/LumiereIQ",
+    "Dragunflie-420/MimicMotion",
+    "salomonsky/video",
+    "thecosmicdoctor/unboxai_publicVideo",
+    "svjack/AniDoc",
+    "jack1969/SVFR-demo",
+    "waloneai/SDX-Image-To-Video",
+    "humvee1249/stable-video-diffusion",
+    "doodle-med/Audio2KineticVid",
+    "LawrenceFriday/Makelele-AI-Video-Studio",
+    "BoobyBoobs/gen-m3mxs2yu",
+    "Utsav0987/Apex-ai",
+    "nadish1210/image-video",
+    "DAVIGABRIELA/SDXT-Image-To-Video",
+    "ajay-k-2026/fast-ai-video-phots",
+    "Master-AI-Oner/Master-AI",
+    "apdelrahman/Epro_tec_._ai",
+    "iam23yhb/DemurePlatformsInc",
+    "fffiloni/Relit-LIVE-ZeroGPU-demo",
+    "Minihits2142/Wan-Dancer-14B",
+    "vloikas/stable-video-diffusion",
+    "TheVilfer/stable-video-diffusion",
+    "piaoyu2011/stable-video-diffusion",
+    "zparadox/stable-video-diffusion",
+    "AlekseyCalvin/SVDxt_to_Neurealize_History",
+    "tiagojardins/stable-video-diffusion",
+    "waledrashed/stable-video-diffusion",
+    "MgMetaverso/stable-video-diffusion",
+    "sejamenath2023/stable-video-diffusionv3",
+    "besarismaili/sd-video",
+    "pallab7685/stable-video-diffusion",
+    "dclxviclan/Stabblediffusiontest",
+    "Bernaj/stable-video-diffusion",
+    "fantos/vidiani",
+    "Moldwebs/sd-video",
+    "Tonic/stable-video-diffusion-xt-1",
+    "Moldwebs/stable-video-diffusion",
+    "panyanyany/stable-video-diffusion",
+    "dadstt/stable-video-diffusion",
+    "ajajjajajaja/StreamingT2V",
+    "conzikool/Video-Diffusion",
+    "Divergent007/stable-video-diffusion",
+    "dereckd/stable-video-diffusion4",
+    "womprat/stable-video-diffusion",
+    "sy555/stable-video-diffusion",
+    "jjqsdq/stable-video-diffusion"
+  ],
+  "tags": [
+    "diffusers",
+    "safetensors",
+    "image-to-video",
+    "license:other",
+    "diffusers:StableVideoDiffusionPipeline",
+    "region:us"
+  ],
+  "transformersInfo": null,
+  "transformers_info": null,
+  "trending_score": null,
+  "used_storage": 32634599639,
+  "widget_data": null
+}

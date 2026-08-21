@@ -1,0 +1,487 @@
+{
+  "_id": "68a19381db43c983deb63fa5",
+  "author": "Qwen",
+  "base_models": null,
+  "cardData": {
+    "base_model": null,
+    "datasets": null,
+    "eval_results": null,
+    "language": [
+      "en",
+      "zh"
+    ],
+    "library_name": "diffusers",
+    "license": "apache-2.0",
+    "license_link": null,
+    "license_name": null,
+    "metrics": null,
+    "model_name": null,
+    "pipeline_tag": "image-to-image",
+    "tags": null
+  },
+  "card_data": {
+    "base_model": null,
+    "datasets": null,
+    "eval_results": null,
+    "language": [
+      "en",
+      "zh"
+    ],
+    "library_name": "diffusers",
+    "license": "apache-2.0",
+    "license_link": null,
+    "license_name": null,
+    "metrics": null,
+    "model_name": null,
+    "pipeline_tag": "image-to-image",
+    "tags": null
+  },
+  "children_model_count": null,
+  "config": {
+    "diffusers": {
+      "_class_name": "QwenImageEditPipeline"
+    }
+  },
+  "created_at": "2025-08-17 08:32:01+00:00",
+  "disabled": false,
+  "downloads": 116787,
+  "downloads_all_time": null,
+  "eval_results": null,
+  "gated": false,
+  "gguf": null,
+  "id": "Qwen/Qwen-Image-Edit",
+  "inference": null,
+  "inference_provider_mapping": null,
+  "lastModified": "2025-08-25 04:41:11+00:00",
+  "last_modified": "2025-08-25 04:41:11+00:00",
+  "library_name": "diffusers",
+  "likes": 2480,
+  "mask_token": null,
+  "modelId": "Qwen/Qwen-Image-Edit",
+  "model_index": null,
+  "pipeline_tag": "image-to-image",
+  "private": false,
+  "resource_group": null,
+  "safetensors": {
+    "parameters": {
+      "BF16": 20430401088
+    },
+    "total": 20430401088
+  },
+  "security_repo_status": null,
+  "sha": "ac7f9318f633fc4b5778c59367c8128225f1e3de",
+  "siblings": [
+    {
+      "blob_id": "b2ef89be59c5792bf037a43d1bb69d922d28e9d8",
+      "lfs": null,
+      "rfilename": ".gitattributes",
+      "size": 1580
+    },
+    {
+      "blob_id": "69ae090e3c5e0b66fc2a7c9113d10a92e7bf655c",
+      "lfs": null,
+      "rfilename": "README.md",
+      "size": 11747
+    },
+    {
+      "blob_id": "cd01879ca0486fc4cb10eb9f52d3eee3f693ad1b",
+      "lfs": null,
+      "rfilename": "model_index.json",
+      "size": 512
+    },
+    {
+      "blob_id": "482ced4679301bf287ebb310bdd1790eb4514232",
+      "lfs": null,
+      "rfilename": "processor/added_tokens.json",
+      "size": 605
+    },
+    {
+      "blob_id": "6c226632394ae7474b0d4b13e15793eac2e21ee9",
+      "lfs": null,
+      "rfilename": "processor/chat_template.jinja",
+      "size": 1017
+    },
+    {
+      "blob_id": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+      "lfs": null,
+      "rfilename": "processor/merges.txt",
+      "size": 1671853
+    },
+    {
+      "blob_id": "14a710470a1f4f12724cd5ab906671939e28d1b7",
+      "lfs": null,
+      "rfilename": "processor/preprocessor_config.json",
+      "size": 788
+    },
+    {
+      "blob_id": "ac23c0aaa2434523c494330aeb79c58395378103",
+      "lfs": null,
+      "rfilename": "processor/special_tokens_map.json",
+      "size": 613
+    },
+    {
+      "blob_id": "51ebb3ba93988c73bbd83a3c163a14343fbc5b06",
+      "lfs": {
+        "pointer_size": 133,
+        "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+        "size": 11421896
+      },
+      "rfilename": "processor/tokenizer.json",
+      "size": 11421896
+    },
+    {
+      "blob_id": "203eb2267a9b927c93a97b67990818164bf3c692",
+      "lfs": null,
+      "rfilename": "processor/tokenizer_config.json",
+      "size": 4727
+    },
+    {
+      "blob_id": "5258b252856504563ff501bbeaf5204ad5d4bc4d",
+      "lfs": null,
+      "rfilename": "processor/video_preprocessor_config.json",
+      "size": 904
+    },
+    {
+      "blob_id": "4783fe10ac3adce15ac8f358ef5462739852c569",
+      "lfs": null,
+      "rfilename": "processor/vocab.json",
+      "size": 2776833
+    },
+    {
+      "blob_id": "f4cc4fffa2878626fc807836f4eb5b0c03434e9a",
+      "lfs": null,
+      "rfilename": "scheduler/scheduler_config.json",
+      "size": 485
+    },
+    {
+      "blob_id": "ea9e555296603c10d7252174f6b86032de4b73c9",
+      "lfs": null,
+      "rfilename": "text_encoder/config.json",
+      "size": 3217
+    },
+    {
+      "blob_id": "42f92ad18683e0865060d227914ecfc77c57a5bf",
+      "lfs": null,
+      "rfilename": "text_encoder/generation_config.json",
+      "size": 244
+    },
+    {
+      "blob_id": "184b37ee89f2f2e1a3cfd32094f3a6b620abb892",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "d725335e4ea2399be706469e4b8807716a8fa64bd03468252e9f7acf2415fee4",
+        "size": 4968243304
+      },
+      "rfilename": "text_encoder/model-00001-of-00004.safetensors",
+      "size": 4968243304
+    },
+    {
+      "blob_id": "39c7b109b36e503a584b9e6570ff44ee51f99eaa",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "b1830db6908dcc76df3a71492acbcf2b8cac130114cf1f3c2d9edae8de8c6de3",
+        "size": 4991495816
+      },
+      "rfilename": "text_encoder/model-00002-of-00004.safetensors",
+      "size": 4991495816
+    },
+    {
+      "blob_id": "550aeb0dada74ffbd038b974d8558c45231a2349",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "09c1807c6d00d7cab94f7db39d4c02ebb8537225ccde383861ac48db97945aa6",
+        "size": 4932751040
+      },
+      "rfilename": "text_encoder/model-00003-of-00004.safetensors",
+      "size": 4932751040
+    },
+    {
+      "blob_id": "e4d8aef129d402105054573957c663123303830a",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "5dd068336d14d45ffb43cef374d286cc6ba9d8741b028f90a7d040d847961f4a",
+        "size": 1691924384
+      },
+      "rfilename": "text_encoder/model-00004-of-00004.safetensors",
+      "size": 1691924384
+    },
+    {
+      "blob_id": "92b467639266f4aa72a9b5ab73dbdf5a1f936ee4",
+      "lfs": null,
+      "rfilename": "text_encoder/model.safetensors.index.json",
+      "size": 57655
+    },
+    {
+      "blob_id": "482ced4679301bf287ebb310bdd1790eb4514232",
+      "lfs": null,
+      "rfilename": "tokenizer/added_tokens.json",
+      "size": 605
+    },
+    {
+      "blob_id": "28028c056af412405debd878cdda0171e35fa5d1",
+      "lfs": null,
+      "rfilename": "tokenizer/chat_template.jinja",
+      "size": 2427
+    },
+    {
+      "blob_id": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+      "lfs": null,
+      "rfilename": "tokenizer/merges.txt",
+      "size": 1671853
+    },
+    {
+      "blob_id": "ac23c0aaa2434523c494330aeb79c58395378103",
+      "lfs": null,
+      "rfilename": "tokenizer/special_tokens_map.json",
+      "size": 613
+    },
+    {
+      "blob_id": "eaed590d62aaf0ba31e284b66ddcb18222f066c2",
+      "lfs": null,
+      "rfilename": "tokenizer/tokenizer_config.json",
+      "size": 4686
+    },
+    {
+      "blob_id": "6bce3a0a3866c4791a74d83d78f6824c3af64ec3",
+      "lfs": null,
+      "rfilename": "tokenizer/vocab.json",
+      "size": 3383407
+    },
+    {
+      "blob_id": "9aa7e5ceb2ca987927ccc5224e687e07063cc09e",
+      "lfs": null,
+      "rfilename": "transformer/config.json",
+      "size": 339
+    },
+    {
+      "blob_id": "ecab5c19ba97fefc4f20927a07ed6abadfa8b491",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "2003cdd961d3a94897f70a49c4cda975e9f92dd938adfeeba4f335f695570310",
+        "size": 4989364312
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00001-of-00009.safetensors",
+      "size": 4989364312
+    },
+    {
+      "blob_id": "2e933e145431b1bfd9f6cd1bcc15448245bf1167",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "d20abf545941bbffe26e201276226332e6ad6a2d3d7a7a18fb45ec7006fcdc8a",
+        "size": 4984214160
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00002-of-00009.safetensors",
+      "size": 4984214160
+    },
+    {
+      "blob_id": "13d5dd72d85f6a80700d8aa3364a49c1c467a0fd",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "1e4d15c80d388b630a97347694914cbc58ea9dc40e472305add52981ca02e856",
+        "size": 4946470000
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00003-of-00009.safetensors",
+      "size": 4946470000
+    },
+    {
+      "blob_id": "350aeeca57219a7b7ae14ba3a82d7df003f63399",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "e5baa4c61fbce2011ea179122a8dc4bfaefb5387feeee5eff765fb237977cbd1",
+        "size": 4984213736
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00004-of-00009.safetensors",
+      "size": 4984213736
+    },
+    {
+      "blob_id": "f3526fd291451982c5e2768b1f993ed955503967",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "c08a2489c7e11f09c9fd4aae929085a31199699f1fa4a2dd95fc65d1ab5c223c",
+        "size": 4946471896
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00005-of-00009.safetensors",
+      "size": 4946471896
+    },
+    {
+      "blob_id": "2e70517858eed3e09a346c33decd0a957699a1de",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "901dfafc0de496f358e27b81af4155b889080aebd4417909303c70a260885fff",
+        "size": 4946451560
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00006-of-00009.safetensors",
+      "size": 4946451560
+    },
+    {
+      "blob_id": "15d6f31ab6762a0afbf56101191146ce155bf799",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "e8d9a14e343d841e425bb4f68c4be44b96d94730d328a175f4549bdde9114c96",
+        "size": 4908690520
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00007-of-00009.safetensors",
+      "size": 4908690520
+    },
+    {
+      "blob_id": "58939a0872f36caea661e3604cfa6156acf114f1",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "f57b82e08f23a33af5a2a6dbf586180b4f5c9e69487d49112544ca5e8fe0d94e",
+        "size": 4984232856
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00008-of-00009.safetensors",
+      "size": 4984232856
+    },
+    {
+      "blob_id": "a6e5ced084faa4b01df8cf0b29e9aa17181d080a",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "b068de3d8644da55bc75f156ba50cd374f397f2fc49c8e8e00c0392db7cd3a70",
+        "size": 1170918840
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00009-of-00009.safetensors",
+      "size": 1170918840
+    },
+    {
+      "blob_id": "056fddcb79864327ada8808ab3b584b6f484355d",
+      "lfs": null,
+      "rfilename": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "size": 198887
+    },
+    {
+      "blob_id": "7107dc5ba335acf886f86541d4ea462a1e097f8a",
+      "lfs": null,
+      "rfilename": "vae/config.json",
+      "size": 730
+    },
+    {
+      "blob_id": "5c203341583690b7e93ff899368ce1a7dce658a6",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "0c8bc8b758c649abef9ea407b95408389a3b2f610d0d10fcb054fe171d0a8344",
+        "size": 253806966
+      },
+      "rfilename": "vae/diffusion_pytorch_model.safetensors",
+      "size": 253806966
+    }
+  ],
+  "spaces": [
+    "RioShiina/ImageGen",
+    "Qwen/Qwen-Image-Edit",
+    "hugging-apps/metaview-lightning",
+    "baka999/ImageGen",
+    "multimodalart/Qwen-Image-Edit-Fast",
+    "Qwen/Qwen-Image-Edit-2511",
+    "Qwen/Qwen-Image-Edit-2509",
+    "nazdridoy/inferoxy-hub",
+    "Dekonstruktio/Flux",
+    "AiSudo/Qwen-Image-to-LoRA",
+    "aiqtech/kofaceid",
+    "linoyts/Qwen-Image-Edit-Inpaint",
+    "zerogpu-aoti/Qwen-Image-Edit-Outpaint",
+    "InstantX/Qwen-Image-ControlNet-Inpainting",
+    "llamameta/nano-banana-experimental",
+    "zerogpu-aoti/Qwen-Image-Edit-Relight",
+    "ginigen/Nano-Banana-PRO",
+    "LPX55/Qwen-Image-Edit_Fast-Presets",
+    "zerogpu-aoti/Qwen-Image-Edit-Multi-Image",
+    "jairwaal/image",
+    "multimodalart/Eigen-Banana",
+    "bep40/Nano-Banana",
+    "artificialguybr/Qwen-Image-Edit-Lora-Explorer",
+    "akhaliq/qwen-image-to-lora",
+    "Heartsync/Qwen-Image-to-LoRA",
+    "cronos3k/CharacterForgePro",
+    "Chalenger/Qwen-Multi-Image-to-Image-Editor-v2.0",
+    "hugging-apps/metaview",
+    "wavespeed/qwen-edit-image",
+    "RAMASocute/Qwen-Qwen-Image-Edit",
+    "bep40/nano-banana-experimental",
+    "yeq6x/QIE-LoRA-training-with-musubi-tuner",
+    "Skywork/Unipic3",
+    "reallifeadi/Qwen-Qwen-Image-Edit",
+    "zerogpu-aoti/Qwen-Image-Edit-aot-dynamic-fa3-fix-cfg",
+    "Jakob08/moneychatbot",
+    "kingkladze/CharacterForgePro",
+    "cku9790/Qwen-Qwen-Image-Edit",
+    "LLMhacker/Qwen-Image-Edit-Fast",
+    "R127/Qwen-Qwen-Image-Edit",
+    "burtenshaw/Qwen-Image-Edit-MCP",
+    "bep40/kofaceid",
+    "zerogpu-aoti/Qwen-Image-Edit-AoT-Regional",
+    "linoyts/Qwen-Image-Edit-2509-Inpaint",
+    "Sebastiankay/bildbearbeitung",
+    "Secondprinsipal/image",
+    "TerrenceY/Qwen-Qwen-Image-Edit",
+    "LLMhacker/Qwen-Image-Edit",
+    "ReallyFloppyPenguin/Qwen-Qwen-Image-Edit",
+    "cbensimon/Qwen-Image-Edit-aot-dynamic-fa3",
+    "Rahul-KJS/Qwen-Qwen-Image-Edit",
+    "xbai4680/sdsadsad",
+    "hsamichg/125qwen",
+    "huggingfaceramki/Ramkiran_searchgpt",
+    "diopside/Qwen-Image-ControlNet-Inpainting-MultiGPU",
+    "mcp-tools/Qwen-Image-Edit-Relight",
+    "Kashidoto/Qwen-Qwen-Image-Edit",
+    "build-small-hackathon/virtual-characters",
+    "rihawiuhf/Qwen-Image-Edit-2511",
+    "TopGeneralDeng/Qwen-Qwen-Image-Edit",
+    "JonathanZouari/Qwen-Qwen-Image-Edit",
+    "hassan1x/Qwen-Qwen-Image-Edit",
+    "affgg/Qwen-Qwen-Image-Edit",
+    "SinniDcat/Qwen-Qwen-Image-Edit",
+    "jalhaq82/Qwen-Qwen-Image-Edit",
+    "fengxingwei/Qwen-Qwen-Image-Edit",
+    "rectmedia/Qwen-Qwen-Image-Edit",
+    "adrawn/Qwen-Qwen-Image-Edit",
+    "MindCraft24729/Qwen-Image-Edit",
+    "jinwu76/Qwen-Qwen-Image-Edit",
+    "Muyumba/Qwen-Qwen-Image-Edit",
+    "FanArtFuseBeads/Qwen-Qwen-Image-Edit",
+    "qwer555/Qwen-Qwen-Image-Edit",
+    "DarwinPRR/Qwen-Qwen-Image-Edit",
+    "baicy/Qwen-Qwen-Image-Edit",
+    "sununy/ff",
+    "AbdelhamedJr/Qwen-Qwen-Image-Edit",
+    "t3llo/Qwen-Qwen-Image-Edit",
+    "Usbebdhndejkss/Qwen-Qwen-Image-Edit",
+    "HumorBuddy/Qwen-Qwen-Image-Edit",
+    "racerx916/Qwen-Qwen-Image-Edit",
+    "WasabiPLP/Qwen-Qwen-Image-Edit",
+    "xiaowuzi/Qwen-Qwen-Image-Edit",
+    "ackpro789/Qwen-Qwen-Image-Edit",
+    "Gvqlo10c/Qwen-Qwen-Image-Edit",
+    "Mehdidib/Qwen-Qwen-Image-Edit",
+    "felipk/Qwen-Qwen-Image-Edit",
+    "fearslayer45/Qwen-Qwen-Image-Edit",
+    "gptken/Qwen-Qwen-Image-Edit",
+    "miangusapa/Qwen-Qwen-Image-Edit",
+    "alis9974/Qwen-Image-Edit2",
+    "cssddnnc/Qwen-Qwen-Image-Edit",
+    "aichimaodeyu/Qwen-Qwen-Image-Edit",
+    "MohanaDeepan/Qwen-Qwen-Image-Edit",
+    "Vigesvikes/Qwen-Qwen-Image-Edit",
+    "ASHWINI66929/Qwen-Qwen-Image-Edit",
+    "itdog-max/Qwen-Qwen-Image-Edit",
+    "wakozee/Qwen-Qwen-Image-Edit",
+    "Sudharsannn/Qwen-Qwen-Image-Edit",
+    "kkvipvip/Qwen-Qwen-Image-Edit"
+  ],
+  "tags": [
+    "diffusers",
+    "safetensors",
+    "image-to-image",
+    "en",
+    "zh",
+    "arxiv:2508.02324",
+    "license:apache-2.0",
+    "diffusers:QwenImageEditPipeline",
+    "region:us"
+  ],
+  "transformersInfo": null,
+  "transformers_info": null,
+  "trending_score": null,
+  "used_storage": 57710671286,
+  "widget_data": null
+}

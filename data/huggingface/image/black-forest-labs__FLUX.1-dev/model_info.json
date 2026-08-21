@@ -1,0 +1,420 @@
+{
+  "_id": "66aaa908fc35e079a941470d",
+  "author": "black-forest-labs",
+  "base_models": null,
+  "cardData": {
+    "base_model": null,
+    "datasets": null,
+    "eval_results": null,
+    "extra_gated_prompt": "By clicking \"Agree\", you agree to the [FluxDev Non-Commercial License Agreement](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md) and acknowledge the [Acceptable Use Policy](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/POLICY.md).",
+    "language": [
+      "en"
+    ],
+    "library_name": null,
+    "license": "other",
+    "license_link": "LICENSE.md",
+    "license_name": "flux-1-dev-non-commercial-license",
+    "metrics": null,
+    "model_name": null,
+    "pipeline_tag": null,
+    "tags": [
+      "text-to-image",
+      "image-generation",
+      "flux"
+    ]
+  },
+  "card_data": {
+    "base_model": null,
+    "datasets": null,
+    "eval_results": null,
+    "extra_gated_prompt": "By clicking \"Agree\", you agree to the [FluxDev Non-Commercial License Agreement](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md) and acknowledge the [Acceptable Use Policy](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/POLICY.md).",
+    "language": [
+      "en"
+    ],
+    "library_name": null,
+    "license": "other",
+    "license_link": "LICENSE.md",
+    "license_name": "flux-1-dev-non-commercial-license",
+    "metrics": null,
+    "model_name": null,
+    "pipeline_tag": null,
+    "tags": [
+      "text-to-image",
+      "image-generation",
+      "flux"
+    ]
+  },
+  "children_model_count": null,
+  "config": {
+    "diffusers": {
+      "_class_name": "FluxPipeline"
+    }
+  },
+  "created_at": "2024-07-31 21:13:44+00:00",
+  "disabled": false,
+  "downloads": 594913,
+  "downloads_all_time": null,
+  "eval_results": null,
+  "gated": "auto",
+  "gguf": null,
+  "id": "black-forest-labs/FLUX.1-dev",
+  "inference": null,
+  "inference_provider_mapping": null,
+  "lastModified": "2025-06-27 16:22:19+00:00",
+  "last_modified": "2025-06-27 16:22:19+00:00",
+  "library_name": "diffusers",
+  "likes": 14186,
+  "mask_token": null,
+  "modelId": "black-forest-labs/FLUX.1-dev",
+  "model_index": null,
+  "pipeline_tag": "text-to-image",
+  "private": false,
+  "resource_group": null,
+  "safetensors": {
+    "parameters": {
+      "BF16": 11901408320
+    },
+    "total": 11901408320
+  },
+  "security_repo_status": null,
+  "sha": "3de623fc3c33e44ffbe2bad470d0f45bccf2eb21",
+  "siblings": [
+    {
+      "blob_id": "147b590320fca0e30b07fce9b0aff6a9a5c3d6da",
+      "lfs": null,
+      "rfilename": ".gitattributes",
+      "size": 1655
+    },
+    {
+      "blob_id": "763a44c31c02064a8388981040487ce8731ddc86",
+      "lfs": null,
+      "rfilename": "LICENSE.md",
+      "size": 18621
+    },
+    {
+      "blob_id": "6089463168e2a87d86f76a6abd7a35f1c791022d",
+      "lfs": null,
+      "rfilename": "README.md",
+      "size": 4394
+    },
+    {
+      "blob_id": "71f11a92800c4a93cead7cebc556531926ecfc33",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38",
+        "size": 335304388
+      },
+      "rfilename": "ae.safetensors",
+      "size": 335304388
+    },
+    {
+      "blob_id": "7c49a4319ae606e6f58dd15991b6f4b7c38a1990",
+      "lfs": {
+        "pointer_size": 132,
+        "sha256": "37a587d0ff3d9dda0d8ab59d65342c0242ffb909573d8d998d599e3401d3d7e9",
+        "size": 1301528
+      },
+      "rfilename": "dev_grid.jpg",
+      "size": 1301528
+    },
+    {
+      "blob_id": "19debd50d8f431809f22ec7c20cafdda4a861e78",
+      "lfs": {
+        "pointer_size": 136,
+        "sha256": "4610115bb0c89560703c892c59ac2742fa821e60ef5871b33493ba544683abd7",
+        "size": 23802932552
+      },
+      "rfilename": "flux1-dev.safetensors",
+      "size": 23802932552
+    },
+    {
+      "blob_id": "f2dcd899e03be059304cc980a87bb9389008ba2f",
+      "lfs": null,
+      "rfilename": "model_index.json",
+      "size": 536
+    },
+    {
+      "blob_id": "a64d1e8763bef5828984682680673fb97829734b",
+      "lfs": null,
+      "rfilename": "scheduler/scheduler_config.json",
+      "size": 273
+    },
+    {
+      "blob_id": "5ebd923ce51522c605f64ab3d26ea024672777b6",
+      "lfs": null,
+      "rfilename": "text_encoder/config.json",
+      "size": 613
+    },
+    {
+      "blob_id": "40a62c5746d88a2483eb10db5ef38d12c5b6b893",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "893d67a23f4693ed42cdab4cbad7fe3e727cf59609c40da28a46b5470f9ed082",
+        "size": 246144352
+      },
+      "rfilename": "text_encoder/model.safetensors",
+      "size": 246144352
+    },
+    {
+      "blob_id": "b00a8a6908682a2091f1194b81f220fd2b67c41c",
+      "lfs": null,
+      "rfilename": "text_encoder_2/config.json",
+      "size": 782
+    },
+    {
+      "blob_id": "fb543745ed2f4aa1105e3a8f97ff89a6ff7b5662",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e",
+        "size": 4994582224
+      },
+      "rfilename": "text_encoder_2/model-00001-of-00002.safetensors",
+      "size": 4994582224
+    },
+    {
+      "blob_id": "c1596ab4886c9962503f01891b16715d1469fbe5",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00",
+        "size": 4530066360
+      },
+      "rfilename": "text_encoder_2/model-00002-of-00002.safetensors",
+      "size": 4530066360
+    },
+    {
+      "blob_id": "c8728bc3dca59d2616a2a594cbac3ddb9eb77d5b",
+      "lfs": null,
+      "rfilename": "text_encoder_2/model.safetensors.index.json",
+      "size": 19885
+    },
+    {
+      "blob_id": "76e821f1b6f0a9709293c3b6b51ed90980b3166b",
+      "lfs": null,
+      "rfilename": "tokenizer/merges.txt",
+      "size": 524619
+    },
+    {
+      "blob_id": "cf0682d6de72c1547f41b4f6d7c59f62deffef94",
+      "lfs": null,
+      "rfilename": "tokenizer/special_tokens_map.json",
+      "size": 588
+    },
+    {
+      "blob_id": "180a4e1be2a7d0b38a44108d6f24f585f35147b1",
+      "lfs": null,
+      "rfilename": "tokenizer/tokenizer_config.json",
+      "size": 705
+    },
+    {
+      "blob_id": "469be27c5c010538f845f518c4f5e8574c78f7c8",
+      "lfs": null,
+      "rfilename": "tokenizer/vocab.json",
+      "size": 1059962
+    },
+    {
+      "blob_id": "17ade346a1042cbe0c1436f5bedcbd85c099d582",
+      "lfs": null,
+      "rfilename": "tokenizer_2/special_tokens_map.json",
+      "size": 2543
+    },
+    {
+      "blob_id": "317a5ccbde45300f5d1d970d4d449af2108b147e",
+      "lfs": {
+        "pointer_size": 131,
+        "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+        "size": 791656
+      },
+      "rfilename": "tokenizer_2/spiece.model",
+      "size": 791656
+    },
+    {
+      "blob_id": "21ed409afa3df5a822caa0fd5da30d13941f90b5",
+      "lfs": null,
+      "rfilename": "tokenizer_2/tokenizer.json",
+      "size": 2424235
+    },
+    {
+      "blob_id": "b336fa236135e6c87e246485e4d69e415cc57da0",
+      "lfs": null,
+      "rfilename": "tokenizer_2/tokenizer_config.json",
+      "size": 20817
+    },
+    {
+      "blob_id": "dbb93438161bb7fbfdcbd8fabf2b67654a38be38",
+      "lfs": null,
+      "rfilename": "transformer/config.json",
+      "size": 378
+    },
+    {
+      "blob_id": "37ee84ace56bb050bad891c48650aea020dcbdc2",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "d86a3038eacaa720682cb9b1da3c49fecf8a3ded605af4def6061eaa18903eb8",
+        "size": 9983040304
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+      "size": 9983040304
+    },
+    {
+      "blob_id": "a8bcfc3795dd2a456307c46da96e83c149aaef5c",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "5e830704a83aa938dfaf23da308100a1c44b83fa084283abf1d163ea727e5f7a",
+        "size": 9949328904
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+      "size": 9949328904
+    },
+    {
+      "blob_id": "0b3719be111db908f942c1b8a4568c70a5d3888c",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "0d9c7c663217d1c3d44a6deed4e1cf1ac09fbc2c4137c47de1e3d74c959833de",
+        "size": 3870584832
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+      "size": 3870584832
+    },
+    {
+      "blob_id": "a7b03767f2395865d98ad50c6e8234f3726af8c0",
+      "lfs": null,
+      "rfilename": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "size": 121262
+    },
+    {
+      "blob_id": "4f7c628fc8e59fc842c9846ed74414249052ba0b",
+      "lfs": null,
+      "rfilename": "vae/config.json",
+      "size": 820
+    },
+    {
+      "blob_id": "3557b83a132d75a1f71bde9963021e667b1a0d2d",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "f5b59a26851551b67ae1fe58d32e76486e1e812def4696a4bea97f16604d40a3",
+        "size": 167666902
+      },
+      "rfilename": "vae/diffusion_pytorch_model.safetensors",
+      "size": 167666902
+    }
+  ],
+  "spaces": [
+    "black-forest-labs/FLUX.1-dev",
+    "TencentARC/Pixal3D",
+    "RioShiina/ImageGen",
+    "bytedance-research/UNO-FLUX",
+    "Nymbo/Serverless-ImgGen-Hub",
+    "hugging-apps/metaview-lightning",
+    "baka999/ImageGen",
+    "DamarJati/FLUX.1-RealismLora",
+    "prithivMLmods/FLUX-LoRA-DLC",
+    "multimodalart/FLUX.1-merged",
+    "black-forest-labs/FLUX.1-Fill-dev",
+    "ameerazam08/FLUX.1-dev-Inpainting-Model-Beta-GPU",
+    "Nymbo/Character-Generator",
+    "LPX55/FLUX.MF-Lightning-Fast-Upscaler",
+    "fffiloni/Stand-In",
+    "eduagarcia/multilingual-tokenizer-leaderboard",
+    "nazdridoy/inferoxy-hub",
+    "AIgoose/money-printer-studio-v3",
+    "Pensioner/shotplan-cinematic-t2v",
+    "Dekonstruktio/Flux",
+    "ysharma/Workflow1111",
+    "yanze/PuLID-FLUX",
+    "jasperai/Flux.1-dev-Controlnet-Upscaler",
+    "multimodalart/flux-lora-the-explorer",
+    "jamesliu1217/EasyControl_Ghibli",
+    "ByteDance/InfiniteYou-FLUX",
+    "multimodalart/flux-style-shaping",
+    "multimodalart/flux-fill-outpaint",
+    "ByteDance/Hyper-FLUX-8Steps-LoRA",
+    "radames/Real-Time-Latent-Consistency-Model",
+    "ByteDance/DreamO",
+    "prithivMLmods/FLUX-LoRA-DLC2",
+    "InstantX/InstantCharacter",
+    "multimodalart/flux-lora-lab",
+    "multimodalart/logo-in-context",
+    "black-forest-labs/FLUX.1-Krea-dev",
+    "Yuanshi/OminiControl_Art",
+    "Yntec/ToyWorld",
+    "bytedance-research/USO",
+    "fantaxy/flx-upscale",
+    "prithivMLmods/FLUX-REALISM",
+    "BoobyBoobs/Flux_Lustly_AI_Uncensored_NSFW_V1",
+    "r3gm/DiffuseCraft",
+    "DamarJati/FLUX.1-DEV-Canny",
+    "John6666/DiffuseCraftMod",
+    "autotrain-projects/train-flux-lora-ease",
+    "yiren98/OmniConsistency",
+    "fantaxy/flx-pulid",
+    "multimodalart/flux-outpainting",
+    "ginigen/Book-Cover",
+    "dn6/FLUX-GIFs",
+    "Agents-MCP-Hackathon/AI-Marketing-Content-Creator",
+    "Manjushri/Manju-Dream-Booth-GPU",
+    "primecai/diffusion-self-distillation",
+    "black-forest-labs/FLUX.1-Redux-dev",
+    "openfree/pepe",
+    "InstantX/flux-IP-adapter",
+    "Heartsync/FLUX-Vision",
+    "NeurixYUFI/imggen",
+    "Alpha-VLLM/Lumina-Image-2.0",
+    "multimodalart/flux-cfg",
+    "John6666/votepurchase-multiple-model",
+    "openfree/DreamO-video",
+    "gokaygokay/FLUX.1-dev-with-Captioner",
+    "Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro",
+    "Yntec/PrintingPress",
+    "radames/Real-Time-SD-Turbo",
+    "Nymbo/Compare-6",
+    "nvidia/addit",
+    "Heartsync/NSFW-detection",
+    "aiqtech/FLUX-Ghibli-Studio-LoRA",
+    "ameerazam08/PhotoDoodle-Image-Edit-GPU",
+    "radames/real-time-pix2pix-turbo",
+    "fotographerai/Zen-Style-Shape",
+    "gokaygokay/Flux-TRELLIS",
+    "nupurkmr9/SynCD",
+    "black-forest-labs/FLUX.1-Depth-dev",
+    "ginigen/Flux-LayerDiffuse",
+    "Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro-2.0",
+    "xiaozaa/catvton-flux-try-on",
+    "seawolf2357/flxloraexp",
+    "FINAL-Bench/all-bench-leaderboard",
+    "MagicBag/FireFlow",
+    "multimodalart/civitai-to-hf",
+    "BLIP3o/blip-3o",
+    "black-forest-labs/FLUX.1-canny-dev",
+    "fallenshock/FlowEdit",
+    "jamesliu1217/EasyControl",
+    "InstantX/SD35-IP-Adapter",
+    "akhaliq/SRPO",
+    "Nymbo/FLUX.1-Dev-Serverless",
+    "Shakker-Labs/FLUX-LoRA-Gallery",
+    "Nick088/FLUX.1-dev",
+    "ovi054/FLUX.Dev-LORA-Serverless",
+    "rizavelioglu/vae-comparison",
+    "vilarin/flux-labs",
+    "Nymbo/Flux.1-dev-Controlnet-Upscaler",
+    "wjs0725/RF-Solver-Edit",
+    "tight-inversion/tight-inversion-pulid-demo",
+    "Insta360-Research/DiT360"
+  ],
+  "tags": [
+    "diffusers",
+    "safetensors",
+    "text-to-image",
+    "image-generation",
+    "flux",
+    "en",
+    "license:other",
+    "endpoints_compatible",
+    "diffusers:FluxPipeline",
+    "region:us"
+  ],
+  "transformersInfo": null,
+  "transformers_info": null,
+  "trending_score": null,
+  "used_storage": 69256397749,
+  "widget_data": null
+}

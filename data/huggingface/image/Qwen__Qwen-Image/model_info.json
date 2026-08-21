@@ -1,0 +1,436 @@
+{
+  "_id": "688d9adf9f62ee5c9a3804eb",
+  "author": "Qwen",
+  "base_models": null,
+  "cardData": {
+    "base_model": null,
+    "datasets": null,
+    "eval_results": null,
+    "language": [
+      "en",
+      "zh"
+    ],
+    "library_name": "diffusers",
+    "license": "apache-2.0",
+    "license_link": null,
+    "license_name": null,
+    "metrics": null,
+    "model_name": null,
+    "pipeline_tag": "text-to-image",
+    "tags": null
+  },
+  "card_data": {
+    "base_model": null,
+    "datasets": null,
+    "eval_results": null,
+    "language": [
+      "en",
+      "zh"
+    ],
+    "library_name": "diffusers",
+    "license": "apache-2.0",
+    "license_link": null,
+    "license_name": null,
+    "metrics": null,
+    "model_name": null,
+    "pipeline_tag": "text-to-image",
+    "tags": null
+  },
+  "children_model_count": null,
+  "config": {
+    "diffusers": {
+      "_class_name": "QwenImagePipeline"
+    }
+  },
+  "created_at": "2025-08-02 04:58:07+00:00",
+  "disabled": false,
+  "downloads": 237706,
+  "downloads_all_time": null,
+  "eval_results": null,
+  "gated": false,
+  "gguf": null,
+  "id": "Qwen/Qwen-Image",
+  "inference": null,
+  "inference_provider_mapping": null,
+  "lastModified": "2025-08-18 02:42:19+00:00",
+  "last_modified": "2025-08-18 02:42:19+00:00",
+  "library_name": "diffusers",
+  "likes": 2582,
+  "mask_token": null,
+  "modelId": "Qwen/Qwen-Image",
+  "model_index": null,
+  "pipeline_tag": "text-to-image",
+  "private": false,
+  "resource_group": null,
+  "safetensors": {
+    "parameters": {
+      "BF16": 20430401088
+    },
+    "total": 20430401088
+  },
+  "security_repo_status": null,
+  "sha": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "siblings": [
+    {
+      "blob_id": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "lfs": null,
+      "rfilename": ".gitattributes",
+      "size": 1519
+    },
+    {
+      "blob_id": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+      "lfs": null,
+      "rfilename": "LICENSE",
+      "size": 11343
+    },
+    {
+      "blob_id": "c43f73115c31ce1b53bd31140c41eae7a4c4b964",
+      "lfs": null,
+      "rfilename": "README.md",
+      "size": 6778
+    },
+    {
+      "blob_id": "602665a351bf4afe6aa02a8a7f52f26fd99b88f8",
+      "lfs": null,
+      "rfilename": "model_index.json",
+      "size": 443
+    },
+    {
+      "blob_id": "637ac12d395c92a8dd54c87441e352c93c609dfc",
+      "lfs": null,
+      "rfilename": "scheduler/scheduler_config.json",
+      "size": 485
+    },
+    {
+      "blob_id": "27d57dbd1b133179a359b6969f5d28d78e633910",
+      "lfs": null,
+      "rfilename": "text_encoder/config.json",
+      "size": 3217
+    },
+    {
+      "blob_id": "fb9a91993c52bd7a752938452eaee2e73b23df4d",
+      "lfs": null,
+      "rfilename": "text_encoder/generation_config.json",
+      "size": 244
+    },
+    {
+      "blob_id": "184b37ee89f2f2e1a3cfd32094f3a6b620abb892",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "d725335e4ea2399be706469e4b8807716a8fa64bd03468252e9f7acf2415fee4",
+        "size": 4968243304
+      },
+      "rfilename": "text_encoder/model-00001-of-00004.safetensors",
+      "size": 4968243304
+    },
+    {
+      "blob_id": "39c7b109b36e503a584b9e6570ff44ee51f99eaa",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "b1830db6908dcc76df3a71492acbcf2b8cac130114cf1f3c2d9edae8de8c6de3",
+        "size": 4991495816
+      },
+      "rfilename": "text_encoder/model-00002-of-00004.safetensors",
+      "size": 4991495816
+    },
+    {
+      "blob_id": "550aeb0dada74ffbd038b974d8558c45231a2349",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "09c1807c6d00d7cab94f7db39d4c02ebb8537225ccde383861ac48db97945aa6",
+        "size": 4932751040
+      },
+      "rfilename": "text_encoder/model-00003-of-00004.safetensors",
+      "size": 4932751040
+    },
+    {
+      "blob_id": "e4d8aef129d402105054573957c663123303830a",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "5dd068336d14d45ffb43cef374d286cc6ba9d8741b028f90a7d040d847961f4a",
+        "size": 1691924384
+      },
+      "rfilename": "text_encoder/model-00004-of-00004.safetensors",
+      "size": 1691924384
+    },
+    {
+      "blob_id": "92b467639266f4aa72a9b5ab73dbdf5a1f936ee4",
+      "lfs": null,
+      "rfilename": "text_encoder/model.safetensors.index.json",
+      "size": 57655
+    },
+    {
+      "blob_id": "482ced4679301bf287ebb310bdd1790eb4514232",
+      "lfs": null,
+      "rfilename": "tokenizer/added_tokens.json",
+      "size": 605
+    },
+    {
+      "blob_id": "28028c056af412405debd878cdda0171e35fa5d1",
+      "lfs": null,
+      "rfilename": "tokenizer/chat_template.jinja",
+      "size": 2427
+    },
+    {
+      "blob_id": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+      "lfs": null,
+      "rfilename": "tokenizer/merges.txt",
+      "size": 1671853
+    },
+    {
+      "blob_id": "ac23c0aaa2434523c494330aeb79c58395378103",
+      "lfs": null,
+      "rfilename": "tokenizer/special_tokens_map.json",
+      "size": 613
+    },
+    {
+      "blob_id": "eaed590d62aaf0ba31e284b66ddcb18222f066c2",
+      "lfs": null,
+      "rfilename": "tokenizer/tokenizer_config.json",
+      "size": 4686
+    },
+    {
+      "blob_id": "6bce3a0a3866c4791a74d83d78f6824c3af64ec3",
+      "lfs": null,
+      "rfilename": "tokenizer/vocab.json",
+      "size": 3383407
+    },
+    {
+      "blob_id": "4bff1e57a145b5b55dbca14d39af45c9c1b7dab7",
+      "lfs": null,
+      "rfilename": "transformer/config.json",
+      "size": 371
+    },
+    {
+      "blob_id": "cc813910afebd1005735725b0668f636e8ed8b94",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "9f33a59093af3abcc2836d4cf4b7bd122c238ca70a26c70f34fdde64646b3bcd",
+        "size": 4989364312
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00001-of-00009.safetensors",
+      "size": 4989364312
+    },
+    {
+      "blob_id": "4ffb36fa83c9032a4e057582826b27ef239b6e3a",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "49d580e85b932e15c226e68a9d5549629878d3a128da7662d28401956cee0238",
+        "size": 4984214160
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00002-of-00009.safetensors",
+      "size": 4984214160
+    },
+    {
+      "blob_id": "df2e3fec36d03c87cce27aa08885886bb4277729",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "0d72f0cbd0d6c2bdc2e1e73e41ac143452fc9e4570d1362203498832302de69f",
+        "size": 4946470000
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00003-of-00009.safetensors",
+      "size": 4946470000
+    },
+    {
+      "blob_id": "b3ebb7862be6874ae6e1aaa780a0edd5942645a8",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "ee87991bfa1bc8e7553034b07099151532524101ca1581c4f3a86292814e9f0d",
+        "size": 4984213736
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00004-of-00009.safetensors",
+      "size": 4984213736
+    },
+    {
+      "blob_id": "328487dbef5749f6b0208cb3bfa50f62e8d63ae2",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "83291a65be26fe688db4cf81383749831b623a6fcb1a71c851bafb55ddc0058d",
+        "size": 4946471896
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00005-of-00009.safetensors",
+      "size": 4946471896
+    },
+    {
+      "blob_id": "a4265649b2418cbe3c862fdb2ef305fa6111a985",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "61e936a995e7f4ce08d44b9d6ffb56dc65dd61200288876ee2fda72da322583d",
+        "size": 4946451560
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00006-of-00009.safetensors",
+      "size": 4946451560
+    },
+    {
+      "blob_id": "e1d254ed80db4eb1af25aa5195c2cd6a048c469a",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "854bc9e4a65c11c256f2fef31606a6407e9a425e8bde394db8be71416c515ead",
+        "size": 4908690520
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00007-of-00009.safetensors",
+      "size": 4908690520
+    },
+    {
+      "blob_id": "1b0744c6b5eab7db8de5c6859f9e8d2e948a6ee4",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "caedc7cc2914ab113cfbb3684cf072350201182ae8de1a7308e419385987ae40",
+        "size": 4984232856
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00008-of-00009.safetensors",
+      "size": 4984232856
+    },
+    {
+      "blob_id": "fb77a2bb5745b87ae8e714b4c56be3bcac32b295",
+      "lfs": {
+        "pointer_size": 135,
+        "sha256": "ae0fef149890f61d54572baa1e806de97156c7ec5b7bbbbbbf27a2d87f33af61",
+        "size": 1170918840
+      },
+      "rfilename": "transformer/diffusion_pytorch_model-00009-of-00009.safetensors",
+      "size": 1170918840
+    },
+    {
+      "blob_id": "056fddcb79864327ada8808ab3b584b6f484355d",
+      "lfs": null,
+      "rfilename": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "size": 198887
+    },
+    {
+      "blob_id": "91a8e175d85b57be6e0d8cdef1bec11e63836c57",
+      "lfs": null,
+      "rfilename": "vae/config.json",
+      "size": 730
+    },
+    {
+      "blob_id": "5c203341583690b7e93ff899368ce1a7dce658a6",
+      "lfs": {
+        "pointer_size": 134,
+        "sha256": "0c8bc8b758c649abef9ea407b95408389a3b2f610d0d10fcb054fe171d0a8344",
+        "size": 253806966
+      },
+      "rfilename": "vae/diffusion_pytorch_model.safetensors",
+      "size": 253806966
+    }
+  ],
+  "spaces": [
+    "RioShiina/ImageGen",
+    "Qwen/Qwen-Image-2512",
+    "hugging-apps/metaview-lightning",
+    "baka999/ImageGen",
+    "Qwen/Qwen-Image",
+    "nazdridoy/inferoxy-hub",
+    "Pensioner/shotplan-cinematic-t2v",
+    "Dekonstruktio/Flux",
+    "AiSudo/Qwen-Image-to-LoRA",
+    "multimodalart/Qwen-Image-Fast",
+    "ovi054/Z-Image-LORA",
+    "InstantX/Qwen-Image-ControlNet-Inpainting",
+    "prithivMLmods/Qwen-Image-LoRA-DLC",
+    "InstantX/Qwen-Image-ControlNet",
+    "multimodalart/Qwen-Image-LoRA-Explorer",
+    "prithivMLmods/Qwen-Image-2512-LoRA-DLC",
+    "mcp-tools/Qwen-Image-Fast",
+    "jbilcke-hf/AiComicFactory2",
+    "linoyts/Qwen-Image-2512-Fast",
+    "Heartsync/Qwen-Image-LORA",
+    "furaidosu/qwen-image-lora-dlc-v3",
+    "daniel-dona/Qwen-Image",
+    "ovi054/Qwen-Image-2512-LORA",
+    "akhaliq/qwen-image-to-lora",
+    "Heartsync/Qwen-Image-to-LoRA",
+    "Patil/krea-2-depth-controlnet",
+    "mcp-tools/Qwen-Image",
+    "Heartsync/Qwen-Image-2512-Fast",
+    "123123aa123/UniGeo",
+    "hugging-apps/metaview",
+    "wavespeed/qwen-image",
+    "furaidosu/qwen-image-2512-lora-dlc",
+    "instaagent/Qwen-Image-Fast-8steps",
+    "Lakonik/pi-Qwen",
+    "Heartsync/qwen-image-lora-dlc-v3",
+    "SahilCarterr/Qwen-Image-Fast",
+    "YUXU915/TAG-MoE",
+    "build-small-hackathon/numzoo",
+    "Tinchote/ImageGen",
+    "daniel-dona/Qwen-Image-Dev",
+    "ReallyFloppyPenguin/Qwen-Qwen-Image",
+    "AiCoderv2/Qwen-Qwen-Image",
+    "diopside/Qwen-Image-ControlNet-Inpainting-MultiGPU",
+    "AnurajXoXo/Qwen-Qwen-Image",
+    "bennybearlover/Qwen-Qwen-Image",
+    "aspygpt/Qwen-Image-2512",
+    "Vector857/d-rex-studio",
+    "ffffww/consistent-image-studio",
+    "vclmax/Qwen-Image-2512-LORA",
+    "goumsss/numzoo",
+    "build-small-hackathon/poetic",
+    "build-small-hackathon/virtual-characters",
+    "hugging-apps/mirror-ppr",
+    "sanetium/img_test",
+    "runebloodstone/img_test",
+    "akhaliq/Qwen-Image-Flash",
+    "ritzy88/textToImage",
+    "wjbmattingly/Qwen-Image-Dev",
+    "spawnwin/Qwen-Qwen-Image",
+    "nusquama/Qwen-Qwen-Image",
+    "NDWG/Qwen-Qwen-Image",
+    "Proxacutor/Qwen-Qwen-Image",
+    "pavel-smrnv/Qwen-Qwen-Image",
+    "Barev/Qwen-Qwen-Image",
+    "Gaejoon/Qwen-Qwen-Image",
+    "NatiTakira/Qwen-Qwen-Image",
+    "FALLENSTAR/Qwen-Qwen-Image",
+    "optiong/Qwen-Qwen-Image",
+    "LLMhacker/Qwen-Image",
+    "fewrimg0eg9ergerg/Qwen-Qwen-Image",
+    "sukablyyat1111/Qwen-Qwen-Image",
+    "purehate99/Qwen-Qwen-Image",
+    "Vadim3737/Qwen-Qwen-Image",
+    "Yilishabai19977/Qwen-Qwen-Image",
+    "allekssandr/Qwen-Qwen-Image",
+    "lexandriamaster/Qwen-Qwen-Image",
+    "kirti010/First_agent_template",
+    "bflooreonline/Qwen-Qwen-Image",
+    "JessicaS5/Qwen-Qwen-Image",
+    "LCTDEVELOPERS/TATTOO-AI",
+    "lfleon/qwen-image-ui",
+    "anuragco/Qwen-Qwen-Image",
+    "felixtsu/Qwen-Qwen-Image",
+    "Taiswhatisee/Qwen-Qwen-Image",
+    "roshiai/Qwen-Qwen-Image",
+    "rogrocks123/Qwen-Qwen-Image",
+    "Samfy001/Qwenimg",
+    "BATTFULL/Qwen-Qwen-Image",
+    "ysamide/Qwen-Qwen-Image",
+    "idavidshow001/Qwen-Qwen-Image",
+    "labelz/Qwen-Qwen-Image",
+    "ishaqaup/Qwen-Qwen-Image",
+    "diffusers-internal-dev/diffusers-to-gguf",
+    "AiCoderv2/Qwen-Qwen-Image-v8437",
+    "sioham/Qwen-Qwen-Image",
+    "AiCoderv2/Qwen-Qwen-Image-V3948",
+    "Mattadoor/Qwen-Qwen-Image",
+    "Rishav2008nyk/Qwen-Qwen-Image",
+    "MenglongCui/Qwen-Qwen-Image",
+    "ZMaxAIru/Qwen-Qwen-Image"
+  ],
+  "tags": [
+    "diffusers",
+    "safetensors",
+    "text-to-image",
+    "en",
+    "zh",
+    "arxiv:2508.02324",
+    "license:apache-2.0",
+    "diffusers:QwenImagePipeline",
+    "deploy:azure",
+    "region:us"
+  ],
+  "transformersInfo": null,
+  "transformers_info": null,
+  "trending_score": null,
+  "used_storage": 57954375058,
+  "widget_data": null
+}

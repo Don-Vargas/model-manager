@@ -1,0 +1,24 @@
+services:
+  model-manager:
+    build: .
+    container_name: model-manager
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - .:/app
+      - .:/tests
+      - ./data:/data
+
+    networks:
+      - minio
+
+networks:
+  minio:
+    external: true
+    name: minio_default
