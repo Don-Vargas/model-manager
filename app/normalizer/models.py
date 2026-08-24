@@ -16,6 +16,7 @@ class ArtifactType(str, Enum):
     METADATA = "metadata"
     DOCUMENTATION = "documentation"
     UNKNOWN = "unknown"
+    ALTERNATE_RUNTIME = "alternate_runtime"
 
 
 @dataclass

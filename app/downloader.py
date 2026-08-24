@@ -1,7 +1,6 @@
 # app/downloader.py
 import hashlib
 import httpx
-from collections.abc import Callable
 
 
 from .providers.huggingface import HuggingFaceProvider
@@ -12,8 +11,6 @@ from .storage import (
 )
 
 CHUNK_SIZE = 64 * 1024 * 1024  # 64 MB
-
-progress_callback: Callable[[int], None] | None = None,
 
 
 class DownloadError(Exception):

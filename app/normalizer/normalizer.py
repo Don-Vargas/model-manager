@@ -171,61 +171,65 @@ class HuggingFaceMetadataNormalizer:
             and not StructureDetector.SHARD_PATTERN.match(f)
         ]
 
-        for w_file in root_weights:
-            unit_id = Path(w_file).stem
-            unit = ModelUnit(
-                id=f"{safe_repo_id}--{unit_id}",
-                name=unit_id,
-                unit_type="single_checkpoint",
-                task_type=pipeline_tag,
-                framework=library_name,
-                precision=FileClassifier.derive_precision([w_file]),
-            )
-            unit.direct_artifacts.append(
-                Artifact(
-                    name=w_file,
-                    artifact_type=FileClassifier.classify_filename(w_file),
-                    files=[w_file],
-                    size_bytes=_sum_sizes([w_file], file_sizes),
+        # A single root weight belongs to the complete repository model; leave it
+        # unconsumed so the monolithic unit also includes config/tokenizer files.
+        defer_to_monolithic = len(root_weights) == 1 and not repo_norm.units
+
+        if not defer_to_monolithic:
+            for w_file in root_weights:
+                unit_id = Path(w_file).stem
+                unit = ModelUnit(
+                    id=f"{safe_repo_id}--{unit_id}",
+                    name=unit_id,
+                    unit_type="single_checkpoint",
+                    task_type=pipeline_tag,
+                    framework=library_name,
+                    precision=FileClassifier.derive_precision([w_file]),
                 )
-            )
-            repo_norm.units.append(unit)
-            consumed_files.add(w_file)
+                unit.direct_artifacts.append(
+                    Artifact(
+                        name=w_file,
+                        artifact_type=FileClassifier.classify_filename(w_file),
+                        files=[w_file],
+                        size_bytes=_sum_sizes([w_file], file_sizes),
+                    )
+                )
+                repo_norm.units.append(unit)
+                consumed_files.add(w_file)
 
         unconsumed = [f for f in all_files if f not in consumed_files]
 
         # ----------------------------------------------------------------------
-        # PASO 5: MODELO MONOLÍTICO SHARDED EN RAÍZ (LLMs)
+        # PASO 5: MODELO MONOLÍTICO EN RAÍZ (LLMs)
         # ----------------------------------------------------------------------
         if unconsumed and not repo_norm.units:
             sharded_art, sharded_consumed = StructureDetector.detect_sharded_artifacts(unconsumed, root_only=True)
-            if sharded_art:
-                for art in sharded_art:
-                    art.size_bytes = _sum_sizes(art.files, file_sizes)
+            for art in sharded_art:
+                art.size_bytes = _sum_sizes(art.files, file_sizes)
 
-                unit = ModelUnit(
-                    id=f"{safe_repo_id}--main",
-                    name=repo_id.split("/")[-1],
-                    unit_type="monolithic",
-                    task_type=pipeline_tag,
-                    framework=library_name,
-                    precision=FileClassifier.derive_precision(unconsumed),
-                )
-                unit.direct_artifacts.extend(sharded_art)
+            unit = ModelUnit(
+                id=f"{safe_repo_id}--main",
+                name=repo_id.split("/")[-1],
+                unit_type="monolithic",
+                task_type=pipeline_tag,
+                framework=library_name,
+                precision=FileClassifier.derive_precision(unconsumed),
+            )
+            unit.direct_artifacts.extend(sharded_art)
 
-                for f in unconsumed:
-                    if f in sharded_consumed:
-                        continue
-                    art_type = FileClassifier.classify_filename(f)
-                    unit.direct_artifacts.append(
-                        Artifact(
-                            name=Path(f).name,
-                            artifact_type=art_type,
-                            files=[f],
-                            size_bytes=_sum_sizes([f], file_sizes),
-                        )
+            for f in unconsumed:
+                if f in sharded_consumed:
+                    continue
+                art_type = FileClassifier.classify_filename(f)
+                unit.direct_artifacts.append(
+                    Artifact(
+                        name=Path(f).name,
+                        artifact_type=art_type,
+                        files=[f],
+                        size_bytes=_sum_sizes([f], file_sizes),
                     )
+                )
 
-                repo_norm.units.append(unit)
+            repo_norm.units.append(unit)
 
         return repo_norm

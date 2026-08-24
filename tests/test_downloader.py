@@ -1,7 +1,7 @@
 from types import SimpleNamespace
 
 from app.main import verify_artifact_file
-
+import app.main as main
 from app.database import ArtifactModel, RepositoryModel
 from app.models import ArtifactStatus, ArtifactFormat
 
@@ -307,4 +307,57 @@ def test_verify_artifact_file_uses_artifact_bucket(monkeypatch):
             "Bucket": "models",
             "Key": "test/model.safetensors",
         }
+    ]
+
+def test_download_uses_hub_size_when_discovery_size_is_missing(monkeypatch):
+    """A rediscovered artifact should still reuse a same-sized MinIO object."""
+    repo = SimpleNamespace(id="owner/model", commit_sha="test-revision")
+    unit = SimpleNamespace(repository=repo)
+    artifact = SimpleNamespace(
+        id="owner--model--main--art--0",
+        unit=unit,
+        component=None,
+        files=["model.safetensors"],
+        status=None,
+        minio_bucket=None,
+        minio_prefix=None,
+    )
+
+    class FakeDb:
+        def commit(self):
+            pass
+
+        def rollback(self):
+            pass
+
+    metadata_calls = []
+
+    class FakeProvider:
+        def __init__(self, token=None):
+            pass
+
+        def get_file_metadata(self, repo_id, filename, revision=None):
+            metadata_calls.append((repo_id, filename, revision))
+            return SimpleNamespace(size=123)
+
+    captured = {}
+
+    def fake_download_file_to_minio(**kwargs):
+        captured["expected_size"] = kwargs["expected_size"]
+        return {
+            "status": "skipped",
+            "size": 123,
+            "checksum": None,
+        }
+
+    monkeypatch.setattr(main, "get_artifact_or_404", lambda artifact_id, db: artifact)
+    monkeypatch.setattr(main, "HuggingFaceProvider", FakeProvider)
+    monkeypatch.setattr(main, "download_file_to_minio", fake_download_file_to_minio)
+
+    result = main.download_artifact_by_id(artifact.id, FakeDb())
+
+    assert result["status"] == "available"
+    assert captured["expected_size"] == 123
+    assert metadata_calls == [
+        ("owner/model", "model.safetensors", "test-revision"),
     ]

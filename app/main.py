@@ -254,6 +254,24 @@ def download_artifact_by_id(artifact_id: str, db: Session) -> Dict[str, Any]:
                 expected_size = None
                 expected_checksum = None
 
+            # Repository rediscovery recreates artifact rows and can erase the
+            # size recorded after a prior download. Recover the authoritative
+            # Hub size so an existing MinIO object can still be reused.
+            if expected_size is None:
+                try:
+                    sibling = provider.get_file_metadata(
+                        repo_id=repo.id,
+                        filename=filename,
+                        revision=repo.commit_sha,
+                    )
+                    remote_size = getattr(sibling, "size", None)
+                    if remote_size is not None:
+                        expected_size = remote_size
+                except Exception:
+                    # Metadata lookup is an optimization; download normally if
+                    # Hugging Face is unavailable or has no metadata for a file.
+                    pass
+
             object_key = build_artifact_object_key_from_prefix(prefix, filename)
             updated_files[index]["download_status"] = "downloading"
             artifact.files = list(updated_files)  # assign a new list so SQLAlchemy tracks JSON changes
