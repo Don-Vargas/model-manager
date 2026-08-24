@@ -9,6 +9,15 @@ class FileClassifier:
 
     DOC_EXTENSIONS = {".md", ".txt", ".rst"}
     DOC_NAMES = {"license", "notice", "changelog", "code_of_conduct"}
+    DIFFUSERS_COMPONENT_DIRS = {
+        "unet",
+        "vae",
+        "text_encoder",
+        "text_encoder_2",
+        "transformer",
+        "image_encoder",
+        "safety_checker",
+    }
     QUANT_PATTERN = re.compile(r"(Q\d+_[KMAZ_0-9]+|IQ\d+_[A-Z0-9]+|FP\d+_\d+|BF16|FP16|Q\d+_\d+)", re.IGNORECASE)
 
     @classmethod
@@ -45,6 +54,19 @@ class FileClassifier:
             return ArtifactType.TOKENIZER
         if "processor" in name_lower:
             return ArtifactType.PROCESSOR
+
+        # Alternate runtime formats in Diffusers components. These are
+        # recognized formats, but not artifacts used by this service's stack.
+        is_diffusers_component = any(
+            part.lower() in cls.DIFFUSERS_COMPONENT_DIRS
+            for part in path.parts[:-1]
+        )
+        if is_diffusers_component and ext_lower in {
+            ".msgpack",
+            ".xml",
+            ".onnx_data",
+        }:
+            return ArtifactType.ALTERNATE_RUNTIME
 
         # Pesos de modelos
         if ext_lower in {".safetensors", ".bin", ".pt", ".pth", ".onnx"}:

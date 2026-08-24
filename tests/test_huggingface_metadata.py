@@ -45,6 +45,41 @@ def test_detect_sharded_transformers_model(assert_data_dir_exists):
     assert len(sharded_artifacts[0].files) == 6
 
 
+def test_single_unsharded_checkpoint_gets_monolithic_grouping(tmp_path):
+    """One root checkpoint must retain its config/tokenizer companion files."""
+    (tmp_path / "model_info.json").write_text(
+        json.dumps(
+            {
+                "id": "Qwen/Qwen3-0.6B",
+                "sha": "test-sha",
+                "siblings": [
+                    {"rfilename": "model.safetensors", "size": 1_503_300_328},
+                    {"rfilename": "config.json", "size": 1_000},
+                    {"rfilename": "tokenizer.json", "size": 2_000},
+                    {"rfilename": "tokenizer_config.json", "size": 500},
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    result = HuggingFaceMetadataNormalizer(tmp_path).normalize()
+
+    assert result is not None
+    assert len(result.units) == 1
+
+    unit = result.units[0]
+    assert unit.unit_type == "monolithic"
+
+    artifact_names = {artifact.name for artifact in unit.direct_artifacts}
+    assert {
+        "model.safetensors",
+        "config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+    } <= artifact_names
+
+
 def test_parse_diffusers_pipeline_components(assert_data_dir_exists):
     """
     Caso: Qwen-Image
@@ -281,3 +316,18 @@ def test_extract_gguf_quantization(filename: str, expected_quant: Optional[str])
 )
 def test_lora_and_gguf_classification(filename: str, expected_type: ArtifactType):
     assert FileClassifier.classify_filename(filename) == expected_type
+
+def test_alternate_diffusers_runtime_formats_are_not_unknown():
+    assert (
+        FileClassifier.classify_filename("unet/flax_model.msgpack")
+        == ArtifactType.ALTERNATE_RUNTIME
+    )
+    assert (
+        FileClassifier.classify_filename("vae/openvino_model.xml")
+        == ArtifactType.ALTERNATE_RUNTIME
+    )
+    assert (
+        FileClassifier.classify_filename("text_encoder/model.onnx_data")
+        == ArtifactType.ALTERNATE_RUNTIME
+    )
+    assert FileClassifier.classify_filename("unet/model.onnx") == ArtifactType.WEIGHTS
